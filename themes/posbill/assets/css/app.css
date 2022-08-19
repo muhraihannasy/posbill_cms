@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap');
+
+body {
+   font-family: 'Inter', sans-serif;
+   overflow-x: hidden;
+}
+
+/* Utils */
+.container {
+    @apply max-w-7xl mx-auto  md:px-10 px-10;
+}
+
+.btn-gradient1 {
+    @apply w-[238px] h-[57px] rounded-full bg-gradient-to-l from-[#922775] to-[#E40979] flex items-center justify-center  text-white lg:shadow-none shadow-lg;
+}
+
+.btn-gradient2 {
+    @apply w-[238px] h-[57px] rounded-full bg-secondary flex items-center justify-center lg:shadow-none shadow-lg;
+}
+
+.dropdown {
+    @apply flex relative flex-col; 
+}
+
+.dropdown-item {
+    @apply flex flex-col justify-center lgTablet:absolute bg-white rounded-[10px] lgTablet:text-primary w-[155px] top-12 left-0 text-[14px] overflow-hidden transition-all lgTablet:max-h-max max-h-0 lgTablet:py-2 py-0 lgTablet:invisible lgTablet:opacity-0 lgTablet:mt-0  
+}
+
+.dropdown-item.active {
+    @apply max-h-32 py-2 mt-2;
+}
+
+.dropdown:hover .dropdown-item {
+    @apply visible opacity-100;
+}
+
+.dropdown-item li {
+    @apply lgTablet:pl-6 pl-3 py-1 hover:bg-primary text-black hover:text-white ;
+}
+
+.prev {
+    @apply absolute lg:left-[-5rem] left-[30%]  lg:top-[38%] bottom-[-2rem]  w-[30px];
+}
+
+.next {
+    @apply absolute lg:right-[-5rem] right-[30%] lg:top-[38%]  bottom-[-2rem]  w-[30px];
+}
+
+/* Utils */
+
+
+/* Navbar */
+.navbar {
+    @apply transition-all -left-[50rem] z-[99999];
+}
+
+.navbar.active {
+    @apply left-0;
+}
+
+.nav-item {
+    @apply relative py-2 pr-2 lgTablet:pl-2 pl-4 transition-colors before:absolute lgTablet:text-white hover:text-white hover:before:bg-primary before:w-full before:h-full before:px-6 before:mx-auto before:rounded-[10px] before:left-[0] before:top-0 before:z-[-1] z-10 cursor-pointer text-[16px] ;
+}
+
+.nav-item.active {
+    @apply py-2 pr-2 lgTablet:pl-2 pl-4 transition-colors bg-primary rounded-[10px] text-white;
+}
+
+.nav-item-2 {
+    @apply relative py-2 pr-2 lgTablet:pl-2 pl-4 transition-colors before:absolute lgTablet:text-white hover:text-white hover:before:bg-fourty before:w-full before:h-full before:px-6 before:mx-auto before:rounded-[10px] before:left-[0] before:top-0 before:z-[-1] z-10 cursor-pointer text-[16px] ;
+}
+
+.nav-item-2.active {
+    @apply py-2 pr-2 lgTablet:pl-2 pl-4 transition-colors bg-fourty rounded-[10px] text-white;
+}
+
+/* Navbar */
+
+/* Section 1 Home */
+
+.fitur-posbill {
+    @apply flex mdPhone:flex-row flex-col mdPhone:items-center  gap-12 mdPhone:mb-[30px] mb-[50px];
+}
+
+.fitur-posbill h3 {
+    @apply font-medium text-[#222222] mb-[10px];
+}
+
+.fitur-posbill img {
+    @apply w-[36px];
+}
+/* Section 1 Home */
+
+
+@media (max-width: 1023px) {
+    .paragraf p {
+     text-align: left !important;
+    }
+}

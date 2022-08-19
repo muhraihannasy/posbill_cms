@@ -1,0 +1,165 @@
+title = "Kasir"
+url = "/kasir"
+layout = "default"
+is_hidden = 0
+section1kasir_title = "Kasir"
+section1kasir_description = "<p>Aplikasi Kasir Serba Cepat, Serba Ringkas, Serba Tepat! &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp;</p>"
+section1kasir_text_btn = "Daftar Sekarang"
+section1kasir_image = "/ils-1k.png"
+
+[viewBag]
+section2kasir[0][title] = "Kelola bisnis dengan mudah"
+section2kasir[0][description] = "<p>Kelola pencatatan transaksi bisnis anda dengan mudah hanya dengan fitur POS aplikasi
+    Posbill. Atur tipe pesanan, harga, diskon, order dan booking dalam satu fitur. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>"
+section2kasir[0][image] = "/ils-2k.png"
+section2kasir[0][right] = 0
+section2kasir[1][title] = "Loyalty hingga Fitur Promosi"
+section2kasir[1][description] = "<p style=\"text-align: right;\">Data setiap pelanggan setia Anda di sistem, berikan
+    manfaat dari promosi atau penerapan harga spesial untuk kategori pelanggan tertentu hingga akumulasi poin yang dapat
+    ditukarkan.</p>"
+section2kasir[1][image] = "/ils-3k.png"
+section2kasir[1][right] = 1
+section2kasir[2][title] = "Mendukung Toko Online"
+section2kasir[2][description] = "<p>Kembangkan bisnis dan jadi semakin profesional dengan website toko online whitelabel
+    yang terhubung dengan aplikasi kasir. Permudah pelanggan setia untuk melakukan pemesanan dengan pilihan pengiriman
+    yang terintegrasi. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <br>
+    <br>
+</p>"
+section2kasir[2][image] = "/ils-4t.png"
+section2kasir[2][right] = 0
+==
+{% set BASEURL = 'http://localhost/posbill_cms/' %}
+
+<header class="mx-auto bg-[#99125A] py-8">
+    <nav class="container flex items-center justify-between">
+        <a href="index.html" class="logo-navbar">
+            <img src="{{ 'assets/images/logo3.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
+        </a>
+        <ul
+            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
+            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
+                <span class="iconify" data-icon="ep:close-bold"></span>
+            </li>
+            <li class="nav-item-2">
+                <a href="index.html" class="z-[20]">BERANDA</a>
+            </li>
+            <li class="nav-item-2 active"><a href="fitur.html">FITUR</a></li>
+            <li class="nav-item-2"><a href="harga.html">HARGA</a></li>
+            <li class="nav-item-2 dropdown">
+                <div class="flex items-center gap-2 dropdown-btn">
+                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
+                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
+                </div>
+
+                <ul class="dropdown-item shadow-lg">
+                    <li><a href="retail.html">Retail</a></li>
+                    <li><a href="jasa.html">Jasa</a></li>
+                    <li><a href="food.html">Food & Beverage</a></li>
+                </ul>
+            </li>
+            </li>
+            <li class="nav-item-2 font-medium"><a href="artikel.html">ARTIKEL</a></li>
+            <li class=" nav-item-2"><a href="kontak_kami.html">KONTAK KAMI</a></li>
+            <li class="lgTablet:mt-0 mt-5">
+                <a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
+                    Login Dashboard</a>
+            </li>
+        </ul>
+        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
+            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="bg-[#A71A65] lg:h-[644px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]">
+        <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10 ">
+            <div class="flex lg:justify-end">
+                <img src="{{ BASEURL }}{{ this.page.section1kasir_image|media }}" alt="" class="lg:w-[483.36px]">
+            </div>
+            <div class="lg:pt-20">
+                <h2 class="font-semibold text-[36px] mb-[24px]">{{ this.page.section1kasir_title }}
+                </h2>
+                <div class="mb-[31px] lg:w-[462px] text-[24px] font-light">
+                    {{ this.page.section1kasir_description|raw }}
+                </div>
+                <a href="" class="btn-gradient2 text-[#222222]">{{ this.page.section1kasir_text_btn }}</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[90px]">
+        <div class="container">
+
+            {% for card in viewBag.section2kasir %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                {% if card.right == true %}
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="lg:text-right font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="lg:text-right text-[16px] paragraf">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                {% else %}
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[16px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+<footer class="bg-third mt-[100px] pt-20 pb-10">
+    <div class="container flex flex-col justify-center items-center gap-16">
+        <ul class="flex lg:flex-row flex-col items-center justify-between gap-6 text-white">
+            <li><a href="">BERANDA</a></li>
+            <li><a href="">FITUR</a></li>
+            <li><a href="">SOLUSI BISNIS</a></li>
+            <li><a href="">HARGA</a></li>
+            <li><a href="">ARTIKEL</a></li>
+            <li><a href="">DONWLOAD APLIKASI</a></li>
+            <li><a href="">KEBIJAKAN PRIVASI</a></li>
+        </ul>
+
+        <img src="{{ 'assets/images/logo2.png'|theme }}" alt="Logo Posbill" class="w-[130.56px]">
+
+        <div>
+            <ul class="flex items-center gap-5">
+                <li>
+                    <img src="{{ 'assets/images/icon/icn-fb.svg'|theme }}" alt="Icon Facebook" class="w-[35.6px]">
+                </li>
+                <li>
+                    <img src="{{ 'assets/images/icon/icn-wa.svg'|theme }}" alt="Icon Whatsapp" class="w-[33px]">
+                </li>
+                <li>
+                    <img src="{{ 'assets/images/icon/icn-yt.svg'|theme }}" alt="Icon Youtube" class="w-[46.02px]">
+                </li>
+                <li>
+                    <img src="{{ 'assets/images/icon/icn-eml.sv'|theme }}g" alt="Icon Email" class="w-[38px]">
+                </li>
+                <li>
+                    <img src="{{ 'assets/images/icon/icn-ig.svg'|theme }}" alt="Icon Instagram" class="w-[33px]">
+                </li>
+            </ul>
+
+            <p class="w-[288px] text-[14px] text-white text-center mt-6">
+                © Copyright 2021, All right reserved
+                PT Novatama Solusi Teknologi
+            </p>
+        </div>
+    </div>
+</footer>

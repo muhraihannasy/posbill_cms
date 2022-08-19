@@ -1,0 +1,315 @@
+title = "Harga"
+url = "/harga"
+layout = "default"
+is_hidden = 0
+section1harga_title = "Harga"
+section1harga_description = "<p>Gratis untuk belajar dan membangun
+	<br>Bayar saat Anda tumbuh
+</p>"
+section1harga_text_btn = "Daftar sekarang"
+section2harga_description = "<p>Paket Gratis kami memungkinkan Anda mempelajari platform dan membangun aplikasi Anda.
+	Paket berbayar menawarkan fitur tambahan seperti dibawah ini.</p>"
+
+[viewBag]
+section2harga_2[0][title] = "LITE"
+section2harga_2[0][price1] = 0
+section2harga_2[0][price2] = ""
+section2harga_2[0][description] = "<p>Gratis
+	<br>selamanya
+</p>"
+section2harga_2[0][text_btn] = "Beli"
+section2harga_2[1][title] = "PREMIUM"
+section2harga_2[1][price1] = 49
+section2harga_2[1][price2] = .000
+section2harga_2[1][description] = "<p>Perbulan atau Rp588.000/tahun, jika ecer bulanan Rp79.000.</p>"
+section2harga_2[1][text_btn] = "Beli"
+==
+{% set BASEURL = 'http://localhost/posbill_cms/' %}
+
+<header class="mx-auto bg-primary py-8">
+	<nav class="container flex items-center justify-between">
+		<a href="index.html" class="logo-navbar">
+			<img src="{{ 'assets/images/logo3.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
+		</a>
+		<ul
+			class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16">
+			<li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
+				<span class="iconify" data-icon="ep:close-bold"></span>
+			</li>
+			<li class="nav-item-2">
+				<a href="index.html" class="z-[20]">BERANDA</a>
+			</li>
+			<li class="nav-item-2"><a href="fitur.html">FITUR</a></li>
+			<li class="nav-item-2 active"><a href="harga.html">HARGA</a></li>
+			<li class="nav-item-2 dropdown">
+				<div class="flex items-center gap-2 dropdown-btn">
+					<a href="javascript:void(0)">SOLUSI BISNIS</a>
+					<span class="iconify" data-icon="ep:arrow-down-bold"></span>
+				</div>
+
+				<ul class="dropdown-item shadow-lg">
+					<li><a href="retail.html">Retail</a></li>
+					<li><a href="jasa.html">Jasa</a></li>
+					<li><a href="food.html">Food & Beverage</a></li>
+				</ul>
+			</li>
+			</li>
+			<li class="nav-item-2 font-medium"><a href="artikel.html">ARTIKEL</a></li>
+			<li class=" nav-item-2"><a href="kontak_kami.html">KONTAK KAMI</a></li>
+			<li class="lgTablet:mt-0 mt-5">
+				<a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
+					Login Dashboard</a>
+			</li>
+		</ul>
+		<div class="lgTablet:hidden cursor-pointer btn-open-nav">
+			<span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
+		</div>
+	</nav>
+</header>
+
+<main>
+	<section class="lg:mt-[150px] mt-[100px]">
+		<div class="container">
+			<div class="flex flex-col items-center justify-center text-center">
+				<h2 class="text-[#7A0E57] font-semibold md:text-[48px] text-[40px] leading-tight mb-[20px]">
+					{{ this.page.section1harga_title }}
+				</h2>
+				<div
+					class="font-semibold text-[#222222] md:text-[48px] md:w-[978px] text-[40px] leading-tight mb-[44px]">
+					{{ this.page.section1harga_description|raw }}
+				</div>
+				<a href="" class="btn-gradient1">{{ this.page.section1harga_text_btn }}</a>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="mt-[100px]">
+		<div class="container flex flex-col items-center gap-10">
+			<div class="flex items-center justify-center">
+				<div class="text-[#222222] text-center md:w-[938px]">
+					{{ this.page.section2harga_description|raw }}
+				</div>
+			</div>
+
+			<div class="grid md:grid-cols-2 grid-cols-1 gap-5 md:w-max w-full">
+				{% for card in viewBag.section2harga_2 %}
+				<div
+					class="md:w-[198.09px] w-full h-[308px] bg-white shadow-xl rounded-md flex flex-col items-center justify-center gap-2">
+					<h2 class="text-[16px]">{{ card.title }}</h2>
+					<div class="relative flex items-center text-primary ">
+						<span class="text-[18px] absolute top-[10px] -left-[25px] font-medium">Rp</span>
+						<h3 class="text-[64px]">{{ card.price1 }}</h3>
+						<span class="text-[10px] pt-12">{{ card.price2 }}</span>
+					</div>
+					{% if card.price1 == '0' %}
+					<div class="text-center text-[18px] w-[138px]">
+						{{ card.description|raw }}
+					</div>
+					{% else %}
+					<div class="text-center text-[12px] w-[138px]">
+						{{ card.description|raw }}
+					</div>
+					{% endif %}
+
+					<a href=""
+						class="py-2 px-16 flex items-center justify-center bg-secondary rounded-full mt-[6px]">Beli</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="mt-[100px] mb-[100px]">
+		<div class="container lg:overflow-x-auto overflow-x-scroll lg:pr-0">
+			<h2
+				class="text-center bg-[#C1136E] lg:w-full w-[59.5rem] rounded-[10px] text-[32px] text-white py-4 lg:mr-0 mr-10">
+				Membandingkan
+				Paket</h2>
+
+			<div class="flex lg:w-full w-[60rem] lg:pr-0 pr-4">
+				<div class="flex flex-col gap-10 pt-32 flex-1 pb-[5rem]">
+					<div class="flex flex-col gap-3">
+						<h2 class="font-semibold text-[#222222] text-[20px]">POS / Transaksi</h2>
+						<h3 class="font-medium text-[#222222] text-[20px]">Jumlah Transaksi Harian</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Booking</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Cetak Tanda Booking</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Ubah Booking</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Kirim Booking WA</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Pembayaran</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Bayar Nanti</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Kirim Struk via WA</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Format Struck</h3>
+					</div>
+					<div class="flex flex-col gap-3">
+						<h2 class="font-semibold text-[#222222] text-[20px]">LAPORAN</h2>
+						<h3 class="font-medium text-[#222222] text-[20px]">Jangka waktu laporan</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Export laporan</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Top Pelanggan</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Top Produk</h3>
+					</div>
+					<div class="flex flex-col gap-3">
+						<h2 class="font-semibold text-[#222222] text-[20px]">PRODUK</h2>
+						<h3 class="font-medium text-[#222222] text-[20px]">Input produk</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Input Kategori</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Inventori</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Stok Cabang</h3>
+					</div>
+					<div class="flex flex-col gap-3">
+						<h2 class="font-semibold text-[#222222] text-[20px]">WEB ADMIN</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">MULTI CABANG MULTI OUTLET</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">Managemen Karyawan</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">TIPE PESANAN</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">PENGATURAN PENJUALAN</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">DISCOUNT</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">TOKO ONLINE</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">Transaksi Offine / Online</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">CUSTOMER SUPPORT *</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">Coming Soon Feature *</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">TABLE MAPPING</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">ABSENSI</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">DOUBLE STRUCK PRINT</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">OJEK ONLINE INTEGRATION</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">AKUNTING</h2>
+						<h2 class="font-semibold text-[#222222] text-[20px]">MEMBERSHIP</h2>
+						<h3 class="font-medium text-[#222222] text-[20px]">Harga</h3>
+					</div>
+				</div>
+				<div class="bg-[#FFDEF6] flex-1 text-center">
+					<h2 class="text-[36px] font-medium text-[#C1136E] translate-y-[2rem]">Lite</h2>
+					<div class="flex flex-col items-center mt-[7.5rem] gap-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">50 Transaksi</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">10 Booking</h3>
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3 mb-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">Cash, Debit & Kredit</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3 mb-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">By Posbill</h3>
+					</div>
+					<div class="flex flex-col items-center mt-[5rem] gap-[0.8rem]">
+						<h3 class="font-medium text-[#222222] text-[20px]">2 Bulan Terakhir</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3">
+					</div>
+					<div class="flex flex-col items-center mt-[5rem] gap-[1.2rem]">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3">
+					</div>
+					<div class="flex flex-col items-center mt-[2.4rem] gap-[0.8rem]">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3 mb-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">1 Admin & 1 Kasir</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3 mb-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">7x24 online</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Slow respond</h3>
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-2 mb-2">
+						<h3 class="font-medium text-[#222222] text-[20px]">CODE</h3>
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3 ">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3 ">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3 ">
+						<img src="{{ 'assets/images/harga/card-no.png'|theme }}" alt="" class="w-[14px] mt-3 mb-3">
+						<button class="bg-secondary py-2 px-6 rounded-md">GRATIS</button>
+					</div>
+				</div>
+				<div class="bg-[#FFDEF6] flex-1 text-center flex flex-col">
+					<h2 class="text-[36px] font-medium text-[#C1136E] translate-y-[2rem] ">Premium</h2>
+					<div class="flex flex-col items-center mt-[7.5rem] gap-3 ">
+						<h3 class="font-medium text-[#222222] text-[20px]">Unlimited</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Unlimited</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3 mb-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">E-Wallet, Cash, Debit, QRIS</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3 mb-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">Edited</h3>
+					</div>
+					<div class="flex flex-col items-center  mt-[5rem] gap-[0.8rem]">
+						<h3 class="font-medium text-[#222222] text-[20px]">Unlimited</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+					</div>
+					<div class="flex flex-col items-center mt-[5rem] gap-[1.2rem]  ">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+					</div>
+					<div class="flex flex-col items-center mt-[2.4rem] gap-[0.8rem] ">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3 mb-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">Unlimited</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-3">
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-2 mb-2">
+						<h3 class="font-medium text-[#222222] text-[20px]">Email ticket</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">Fast respond</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-2 mb-2">
+						<h3 class="font-medium text-[#222222] text-[20px]">FACE DAN CODE</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-2 mb-3">
+						<h3 class="font-medium text-[#222222] text-[20px]">GRAB, GOFOOD, SHOPEE</h3>
+						<h3 class="font-medium text-[#222222] text-[20px]">KASBILL</h3>
+						<img src="{{ 'assets/images/harga/card-ok.png'|theme }}" alt="" class="w-[14px] mt-2 mb-2">
+						<button class="bg-[#59DC9D] py-2 px-6 rounded-md">49.000/bulan</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</main>
+
+
+<footer class="mt-[100px] bg-third pt-20 pb-10">
+	<div class="container flex flex-col justify-center items-center gap-16">
+		<ul class="flex lg:flex-row flex-col items-center justify-between gap-6 text-white">
+			<li><a href="">BERANDA</a></li>
+			<li><a href="">FITUR</a></li>
+			<li><a href="">SOLUSI BISNIS</a></li>
+			<li><a href="">HARGA</a></li>
+			<li><a href="">ARTIKEL</a></li>
+			<li><a href="">DONWLOAD APLIKASI</a></li>
+			<li><a href="">KEBIJAKAN PRIVASI</a></li>
+		</ul>
+
+		<img src="{{ 'assets/images/logo2.png'|theme }}" alt="Logo Posbill" class="w-[130.56px]">
+
+		<div>
+			<ul class="flex items-center gap-5">
+				<li>
+					<img src="{{ 'assets/images/icon/icn-fb.svg'|theme }}" alt="Icon Facebook" class="w-[35.6px]">
+				</li>
+				<li>
+					<img src="{{ 'assets/images/icon/icn-wa.svg'|theme }}" alt="Icon Whatsapp" class="w-[33px]">
+				</li>
+				<li>
+					<img src="{{ 'assets/images/icon/icn-yt.svg'|theme }}" alt="Icon Youtube" class="w-[46.02px]">
+				</li>
+				<li>
+					<img src="{{ 'assets/images/icon/icn-eml.sv'|theme }}g" alt="Icon Email" class="w-[38px]">
+				</li>
+				<li>
+					<img src="{{ 'assets/images/icon/icn-ig.svg'|theme }}" alt="Icon Instagram" class="w-[33px]">
+				</li>
+			</ul>
+
+			<p class="w-[288px] text-[14px] text-white text-center mt-6">
+				© Copyright 2021, All right reserved
+				PT Novatama Solusi Teknologi
+			</p>
+		</div>
+	</div>
+</footer>
