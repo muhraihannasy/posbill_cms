@@ -44,7 +44,10 @@ class __TwigTemplate_79ef4ccc7cd63c7cbda17f240ee744cbd19469e485b98fb35018914df5e
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/bg-slay.svg");
         echo "')\">
     <nav class=\"container flex items-center justify-between pt-10\">
-        <a href=\"index.html\" class=\"logo-navbar\">
+        <a href=\"";
+        // line 5
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("beranda");
+        echo "\" class=\"logo-navbar\">
             <img src=\"";
         // line 6
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logo1.png");
@@ -56,10 +59,19 @@ class __TwigTemplate_79ef4ccc7cd63c7cbda17f240ee744cbd19469e485b98fb35018914df5e
                 <span class=\"iconify\" data-icon=\"ep:close-bold\"></span>
             </li>
             <li class=\"nav-item active\">
-                <a href=\"index.html\" class=\"z-[20]\">BERANDA</a>
+                <a href=\"";
+        // line 14
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("beranda");
+        echo "\" class=\"z-[20]\">BERANDA</a>
             </li>
-            <li class=\"nav-item\"><a href=\"fitur.html\">FITUR</a></li>
-            <li class=\"nav-item\"><a href=\"harga.html\">HARGA</a></li>
+            <li class=\"nav-item\"><a href=\"";
+        // line 16
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("fitur");
+        echo "\">FITUR</a></li>
+            <li class=\"nav-item\"><a href=\"";
+        // line 17
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("harga");
+        echo "\">HARGA</a></li>
             <li class=\"nav-item dropdown\">
                 <div class=\"flex items-center gap-2 dropdown-btn\">
                     <a href=\"javascript:void(0)\">SOLUSI BISNIS</a>
@@ -67,16 +79,31 @@ class __TwigTemplate_79ef4ccc7cd63c7cbda17f240ee744cbd19469e485b98fb35018914df5e
                 </div>
 
                 <ul class=\"dropdown-item\">
-                    <li><a href=\"retail.html\">Retail</a></li>
-                    <li><a href=\"jasa.html\">Jasa</a></li>
-                    <li><a href=\"food.html\">Food & Beverage</a></li>
+                    <li><a href=\"";
+        // line 25
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("retail");
+        echo "\">Retail</a></li>
+                    <li><a href=\"";
+        // line 26
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("jasa");
+        echo "\">Jasa</a></li>
+                    <li><a href=\"";
+        // line 27
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("food");
+        echo "\">Food & Beverage</a></li>
                 </ul>
             </li>
             </li>
-            <li class=\"nav-item font-medium\"><a href=\"artikel.html\">ARTIKEL</a></li>
-            <li class=\" nav-item\"><a href=\"kontak_kami.html\">KONTAK KAMI</a></li>
+            <li class=\"nav-item font-medium\"><a href=\"";
+        // line 31
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("artikel");
+        echo "\">ARTIKEL</a></li>
+            <li class=\" nav-item\"><a href=\"";
+        // line 32
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("kontak-kami");
+        echo "\">KONTAK KAMI</a></li>
             <li class=\"lgTablet:mt-0 mt-5\">
-                <a href=\"login_dashboard.html\" class=\"rounded-full bg-secondary px-5 py-4 ml-2 text-primary\">
+                <a href=\"#\" class=\"rounded-full bg-secondary px-5 py-4 ml-2 text-primary\">
                     Login Dashboard</a>
             </li>
         </ul>
@@ -491,7 +518,7 @@ class __TwigTemplate_79ef4ccc7cd63c7cbda17f240ee744cbd19469e485b98fb35018914df5e
 
     public function getDebugInfo()
     {
-        return array (  468 => 252,  462 => 249,  456 => 246,  450 => 243,  444 => 240,  436 => 235,  414 => 217,  409 => 216,  403 => 213,  397 => 210,  392 => 208,  388 => 207,  374 => 196,  367 => 192,  361 => 189,  352 => 183,  346 => 180,  336 => 173,  326 => 166,  322 => 164,  320 => 163,  311 => 156,  301 => 152,  296 => 150,  289 => 149,  286 => 148,  282 => 147,  273 => 141,  269 => 139,  267 => 138,  259 => 132,  247 => 130,  243 => 129,  236 => 125,  233 => 124,  231 => 123,  217 => 113,  211 => 110,  204 => 106,  197 => 102,  189 => 97,  184 => 95,  170 => 83,  159 => 78,  154 => 76,  146 => 74,  143 => 73,  139 => 72,  135 => 70,  133 => 69,  125 => 65,  111 => 55,  105 => 52,  100 => 50,  94 => 47,  50 => 6,  44 => 3,  41 => 2,  39 => 1,);
+        return array (  495 => 252,  489 => 249,  483 => 246,  477 => 243,  471 => 240,  463 => 235,  441 => 217,  436 => 216,  430 => 213,  424 => 210,  419 => 208,  415 => 207,  401 => 196,  394 => 192,  388 => 189,  379 => 183,  373 => 180,  363 => 173,  353 => 166,  349 => 164,  347 => 163,  338 => 156,  328 => 152,  323 => 150,  316 => 149,  313 => 148,  309 => 147,  300 => 141,  296 => 139,  294 => 138,  286 => 132,  274 => 130,  270 => 129,  263 => 125,  260 => 124,  258 => 123,  244 => 113,  238 => 110,  231 => 106,  224 => 102,  216 => 97,  211 => 95,  197 => 83,  186 => 78,  181 => 76,  173 => 74,  170 => 73,  166 => 72,  162 => 70,  160 => 69,  152 => 65,  138 => 55,  132 => 52,  127 => 50,  121 => 47,  103 => 32,  99 => 31,  92 => 27,  88 => 26,  84 => 25,  73 => 17,  69 => 16,  64 => 14,  53 => 6,  49 => 5,  44 => 3,  41 => 2,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -500,7 +527,7 @@ class __TwigTemplate_79ef4ccc7cd63c7cbda17f240ee744cbd19469e485b98fb35018914df5e
 <header class=\"mx-auto max-w-[1800px] z-20 bg-no-repeat bg-right-top h-[1056px]\"
     style=\"background-image: url('{{ 'assets/images/bg-slay.svg'|theme }}')\">
     <nav class=\"container flex items-center justify-between pt-10\">
-        <a href=\"index.html\" class=\"logo-navbar\">
+        <a href=\"{{ 'beranda'|page }}\" class=\"logo-navbar\">
             <img src=\"{{ 'assets/images/logo1.png'|theme }}\" alt=\"Logo Posbill\" class=\"w-[250px]\">
         </a>
         <ul
@@ -509,10 +536,10 @@ class __TwigTemplate_79ef4ccc7cd63c7cbda17f240ee744cbd19469e485b98fb35018914df5e
                 <span class=\"iconify\" data-icon=\"ep:close-bold\"></span>
             </li>
             <li class=\"nav-item active\">
-                <a href=\"index.html\" class=\"z-[20]\">BERANDA</a>
+                <a href=\"{{ 'beranda'|page }}\" class=\"z-[20]\">BERANDA</a>
             </li>
-            <li class=\"nav-item\"><a href=\"fitur.html\">FITUR</a></li>
-            <li class=\"nav-item\"><a href=\"harga.html\">HARGA</a></li>
+            <li class=\"nav-item\"><a href=\"{{ 'fitur'|page }}\">FITUR</a></li>
+            <li class=\"nav-item\"><a href=\"{{ 'harga'|page }}\">HARGA</a></li>
             <li class=\"nav-item dropdown\">
                 <div class=\"flex items-center gap-2 dropdown-btn\">
                     <a href=\"javascript:void(0)\">SOLUSI BISNIS</a>
@@ -520,16 +547,16 @@ class __TwigTemplate_79ef4ccc7cd63c7cbda17f240ee744cbd19469e485b98fb35018914df5e
                 </div>
 
                 <ul class=\"dropdown-item\">
-                    <li><a href=\"retail.html\">Retail</a></li>
-                    <li><a href=\"jasa.html\">Jasa</a></li>
-                    <li><a href=\"food.html\">Food & Beverage</a></li>
+                    <li><a href=\"{{ 'retail'|page }}\">Retail</a></li>
+                    <li><a href=\"{{ 'jasa'|page }}\">Jasa</a></li>
+                    <li><a href=\"{{ 'food'|page }}\">Food & Beverage</a></li>
                 </ul>
             </li>
             </li>
-            <li class=\"nav-item font-medium\"><a href=\"artikel.html\">ARTIKEL</a></li>
-            <li class=\" nav-item\"><a href=\"kontak_kami.html\">KONTAK KAMI</a></li>
+            <li class=\"nav-item font-medium\"><a href=\"{{ 'artikel'|page }}\">ARTIKEL</a></li>
+            <li class=\" nav-item\"><a href=\"{{ 'kontak-kami'|page }}\">KONTAK KAMI</a></li>
             <li class=\"lgTablet:mt-0 mt-5\">
-                <a href=\"login_dashboard.html\" class=\"rounded-full bg-secondary px-5 py-4 ml-2 text-primary\">
+                <a href=\"#\" class=\"rounded-full bg-secondary px-5 py-4 ml-2 text-primary\">
                     Login Dashboard</a>
             </li>
         </ul>
@@ -763,13 +790,13 @@ class __TwigTemplate_79ef4ccc7cd63c7cbda17f240ee744cbd19469e485b98fb35018914df5e
     public function checkSecurity()
     {
         static $tags = array("set" => 1, "for" => 72);
-        static $filters = array("theme" => 3, "escape" => 47, "raw" => 50, "media" => 55);
+        static $filters = array("theme" => 3, "page" => 5, "escape" => 47, "raw" => 50, "media" => 55);
         static $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 ['set', 'for'],
-                ['theme', 'escape', 'raw', 'media'],
+                ['theme', 'page', 'escape', 'raw', 'media'],
                 []
             );
         } catch (SecurityError $e) {

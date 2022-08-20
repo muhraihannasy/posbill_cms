@@ -98,7 +98,7 @@ section5home_2[2][description] = "<p>Aplikasi Posbill mempermudah operasional bi
 <header class="mx-auto max-w-[1800px] z-20 bg-no-repeat bg-right-top h-[1056px]"
     style="background-image: url('{{ 'assets/images/bg-slay.svg'|theme }}')">
     <nav class="container flex items-center justify-between pt-10">
-        <a href="index.html" class="logo-navbar">
+        <a href="{{ 'beranda'|page }}" class="logo-navbar">
             <img src="{{ 'assets/images/logo1.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
         </a>
         <ul
@@ -107,10 +107,10 @@ section5home_2[2][description] = "<p>Aplikasi Posbill mempermudah operasional bi
                 <span class="iconify" data-icon="ep:close-bold"></span>
             </li>
             <li class="nav-item active">
-                <a href="index.html" class="z-[20]">BERANDA</a>
+                <a href="{{ 'beranda'|page }}" class="z-[20]">BERANDA</a>
             </li>
-            <li class="nav-item"><a href="fitur.html">FITUR</a></li>
-            <li class="nav-item"><a href="harga.html">HARGA</a></li>
+            <li class="nav-item"><a href="{{ 'fitur'|page }}">FITUR</a></li>
+            <li class="nav-item"><a href="{{ 'harga'|page }}">HARGA</a></li>
             <li class="nav-item dropdown">
                 <div class="flex items-center gap-2 dropdown-btn">
                     <a href="javascript:void(0)">SOLUSI BISNIS</a>
@@ -118,16 +118,16 @@ section5home_2[2][description] = "<p>Aplikasi Posbill mempermudah operasional bi
                 </div>
 
                 <ul class="dropdown-item">
-                    <li><a href="retail.html">Retail</a></li>
-                    <li><a href="jasa.html">Jasa</a></li>
-                    <li><a href="food.html">Food & Beverage</a></li>
+                    <li><a href="{{ 'retail'|page }}">Retail</a></li>
+                    <li><a href="{{ 'jasa'|page }}">Jasa</a></li>
+                    <li><a href="{{ 'food'|page }}">Food & Beverage</a></li>
                 </ul>
             </li>
             </li>
-            <li class="nav-item font-medium"><a href="artikel.html">ARTIKEL</a></li>
-            <li class=" nav-item"><a href="kontak_kami.html">KONTAK KAMI</a></li>
+            <li class="nav-item font-medium"><a href="{{ 'artikel'|page }}">ARTIKEL</a></li>
+            <li class=" nav-item"><a href="{{ 'kontak-kami'|page }}">KONTAK KAMI</a></li>
             <li class="lgTablet:mt-0 mt-5">
-                <a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
+                <a href="#" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
                     Login Dashboard</a>
             </li>
         </ul>

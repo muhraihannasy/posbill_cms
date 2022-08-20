@@ -1,4 +1,4 @@
-1660839589a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1047:"==
+1661017895a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1149:"==
 <!doctype html>
 <html>
 
@@ -21,8 +21,11 @@
     </main>
 
     <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+    {% framework extras %}
+
     <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}"></script>
 
 
@@ -34,7 +37,7 @@
     <script src="{{ 'assets/js/carousel.js'|theme }}"></script>
 </body>
 
-</html>";s:5:"mtime";i:1660576840;s:6:"markup";s:1043:"<!doctype html>
+</html>";s:5:"mtime";i:1661015861;s:6:"markup";s:1145:"<!doctype html>
 <html>
 
 <head>
@@ -56,8 +59,11 @@
     </main>
 
     <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+    {% framework extras %}
+
     <script src="{{ 'assets/js/owl.carousel.min.js'|theme }}"></script>
 
 

@@ -8,7 +8,7 @@ section1retail_description = "<p>Sistem aplikasi Point of Sale yang memahami keb
 section1retail_text_btn = "Daftar sekarang"
 section1retail_background = "/bg.png"
 section2retail_title = "Punya beribu-ribu produk? POSbill bisa mengelola hingga beribu-ribu ribu SKU produk"
-section2retail_image = "/img-1.png"
+section2retail_image = "/img-1r.png"
 section3retail_title = "Jual Lebih Banyak dari Mana Saja"
 
 [viewBag]
@@ -39,46 +39,9 @@ postPage = "blog/post"
 ==
 {% set BASEURL = 'http://localhost/posbill_cms/' %}
 
-<header class="mx-auto bg-primary py-8">
-    <nav class="container flex items-center justify-between">
-        <a href="index.html" class="logo-navbar">
-            <img src="{{ 'assets/images/logo3.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
-        </a>
-        <ul
-            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
-            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
-                <span class="iconify" data-icon="ep:close-bold"></span>
-            </li>
-            <li class="nav-item-2">
-                <a href="index.html" class="z-[20]">BERANDA</a>
-            </li>
-            <li class="nav-item-2"><a href="fitur.html">FITUR</a></li>
-            <li class="nav-item-2"><a href="harga.html">HARGA</a></li>
-            <li class="nav-item-2 dropdown active">
-                <div class="flex items-center gap-2 dropdown-btn">
-                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
-                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
-                </div>
+{% partial 'nav2' %}
 
-                <ul class="dropdown-item shadow-lg">
-                    <li><a href="retail.html">Retail</a></li>
-                    <li><a href="jasa.html">Jasa</a></li>
-                    <li><a href="food.html">Food & Beverage</a></li>
-                </ul>
-            </li>
-            </li>
-            <li class="nav-item-2 font-medium"><a href="artikel.html">ARTIKEL</a></li>
-            <li class=" nav-item-2"><a href="kontak_kami.html">KONTAK KAMI</a></li>
-            <li class="lgTablet:mt-0 mt-5">
-                <a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
-                    Login Dashboard</a>
-            </li>
-        </ul>
-        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
-            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
-        </div>
-    </nav>
-</header>
+
 
 <main>
     <section class="bg-no-repeat bg-center bg-cover h-[644px] flex items-center text-white"
@@ -150,104 +113,58 @@ postPage = "blog/post"
         <div class="container">
             <h2 class="text-[32px] font-semibold text-[#222222] mb-[38px]">Artikel POSbill</h2>
 
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-28">
-                <div>
-                    <img src="{{ 'assets/images/jasa/img-ar1.png'|theme }}" alt="">
-                    <h3 class="font-medium text-[16px] mt-8">4 Tips UMKM Pasti Bisa Berkembang</h3>
-                    <div class="mt-6">
-                        <p class="text-[14px] mb-4">
-                            Mengenali Kompetitor Mulai cari tahu dan kenal dengan siapa competitor yang akan
-                            membuatmu paham dengan kelebihan dan
-                            kekurangan dari produk yang mereka tawarkan. Kelebihan yang ada pada kompetitor
-                            sebaiknya kamu bisa...
-                        </p>
-                        <a href="" class="flex items-center gap-4 text-primary">
-                            Selengkapnya
-                            <span class="iconify" data-icon="charm:arrow-right"></span>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <img src="{{ 'assets/images/jasa/img-ar2.png'|theme }}" alt="">
-                    <h3 class="font-medium text-[16px] mt-8">Pakai 4 Tips ini Untuk Menghindari Tumpukan Pekerjaan
-                    </h3>
-                    <div class="mt-6">
-                        <p class="text-[14px] mb-4 ">
-                            Fokus Yang jadi langkah pertama dalam masalah ini adalah kamu harus fokus terhadap
-                            pekerjaan yang kamu lakukan. Pisahkan
-                            terhadap pekerjaan yang harus kamu selesaikan terlebih dahulu dengan membuat skala
-                            prioritas, dan tetap ...
-                        </p>
-                        <a href="" class="flex items-center gap-4 text-primary">
-                            Selengkapnya
-                            <span class="iconify" data-icon="charm:arrow-right"></span>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <img src="{{ 'assets/images/jasa/img-ar3.png'|theme }}" alt="">
-                    <h3 class="font-medium text-[16px] mt-8">4 Tips Ini di Jamin Bikin Laundry Kamu Bakal Sukses
-                    </h3>
-                    <div class="mt-6">
-                        <p class="text-[14px] mb-4">
-                            Kepercyaan Dengan Hasil Cucian Pastinya konsumen mengharapkan hasilnya cucian yang dia
-                            laundry akan bersih, rapi, dan
-                            juga harum. Nah dengan ini kamu harus menjaga kepercayaan konsumenmu dengan memastikan
-                            cucian mereka ...
-                        </p>
-                        <a href="" class="flex items-center gap-4 text-primary">
-                            Selengkapnya
-                            <span class="iconify" data-icon="charm:arrow-right"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+
+            {% set posts = blogPosts.posts %}
+
+            <ul class="post-list grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-28">
+                {% for post in posts %}
+
+                <li>
+                    <a href="{{ post.url }}">
+                        {% if post.featured_images.count %}
+                        <div class="featured-images text-center">
+                            {% for image in post.featured_images %}
+                            <p>
+                                <img data-src="{{ image.filename }}" src="{{ image.path }}"
+                                    alt="{{ image.description }}" class="w-full" />
+                            </p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <h3 class="font-medium text-[16px] mt-4"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="excerpt text-[14px] mt-5">{{ post.summary|raw }}</p>
+                    </a>
+                    <a href="{{ post.url }}" class="flex items-center gap-4 text-primary mt-2">
+                        Selengkapnya
+                        <span class="iconify" data-icon="charm:arrow-right"></span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+                {% endfor %}
+            </ul>
+
+            {% if posts.lastPage > 1 %}
+            <ul class="pagination">
+                {% if posts.currentPage > 1 %}
+                <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr;
+                        Prev</a></li>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                    <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
+                </li>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next
+                        &rarr;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
         </div>
     </section>
-
-    {% set posts = blogPosts.posts %}
-
-    <ul class="post-list">
-        {% for post in posts %}
-
-        <li>
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            {{ post.featured_images[post.id].path }}
-            <p class="info">
-                Posted
-                {% if post.categories|length %} in {% endif %}
-                {% for category in post.categories %}
-                <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-                {% endfor %}
-                on {{ post.published_at|date('M d, Y') }}
-            </p>
-
-            <p class="excerpt">{{ post.summary|raw }}</p>
-        </li>
-        {% else %}
-        <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
-        {% endfor %}
-    </ul>
-
-    {% if posts.lastPage > 1 %}
-    <ul class="pagination">
-        {% if posts.currentPage > 1 %}
-        <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr;
-                Prev</a></li>
-        {% endif %}
-
-        {% for page in 1..posts.lastPage %}
-        <li class="{{ posts.currentPage == page ? 'active' : null }}">
-            <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
-        </li>
-        {% endfor %}
-
-        {% if posts.lastPage > posts.currentPage %}
-        <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next
-                &rarr;</a></li>
-        {% endif %}
-    </ul>
-    {% endif %}
 
 </main>
 

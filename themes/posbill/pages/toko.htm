@@ -35,46 +35,8 @@ section2toko[2][right] = 0
 ==
 {% set BASEURL = 'http://localhost/posbill_cms/' %}
 
-<header class="mx-auto bg-[#99125A] py-8">
-    <nav class="container flex items-center justify-between">
-        <a href="index.html" class="logo-navbar">
-            <img src="{{ 'assets/images/logo3.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
-        </a>
-        <ul
-            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
-            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
-                <span class="iconify" data-icon="ep:close-bold"></span>
-            </li>
-            <li class="nav-item-2">
-                <a href="index.html" class="z-[20]">BERANDA</a>
-            </li>
-            <li class="nav-item-2 active"><a href="fitur.html">FITUR</a></li>
-            <li class="nav-item-2"><a href="harga.html">HARGA</a></li>
-            <li class="nav-item-2 dropdown">
-                <div class="flex items-center gap-2 dropdown-btn">
-                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
-                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
-                </div>
+{% partial 'nav2' %}
 
-                <ul class="dropdown-item shadow-lg">
-                    <li><a href="retail.html">Retail</a></li>
-                    <li><a href="jasa.html">Jasa</a></li>
-                    <li><a href="food.html">Food & Beverage</a></li>
-                </ul>
-            </li>
-            </li>
-            <li class="nav-item-2 font-medium"><a href="artikel.html">ARTIKEL</a></li>
-            <li class=" nav-item-2"><a href="kontak_kami.html">KONTAK KAMI</a></li>
-            <li class="lgTablet:mt-0 mt-5">
-                <a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
-                    Login Dashboard</a>
-            </li>
-        </ul>
-        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
-            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
-        </div>
-    </nav>
-</header>
 
 <main>
     <section class="bg-[#A71A65] lg:h-[644px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]">

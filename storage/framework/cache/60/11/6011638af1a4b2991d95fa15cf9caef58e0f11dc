@@ -1,4 +1,4 @@
-1660839589a:1:{s:9:"fitur.htm";a:23:{s:8:"fileName";s:9:"fitur.htm";s:7:"content";s:21388:"title = "Fitur"
+1661017312a:1:{s:9:"fitur.htm";a:23:{s:8:"fileName";s:9:"fitur.htm";s:7:"content";s:19175:"title = "Fitur"
 url = "/fitur"
 layout = "default"
 is_hidden = 0
@@ -67,46 +67,8 @@ section2fitur[7][right] = 1
 
 {% set BASEURL = 'http://localhost/posbill_cms/' %}
 
-<header class="mx-auto bg-primary py-8">
-    <nav class="container flex items-center justify-between">
-        <a href="index.html" class="logo-navbar">
-            <img src="{{ 'assets/images/logo3.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
-        </a>
-        <ul
-            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
-            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
-                <span class="iconify" data-icon="ep:close-bold"></span>
-            </li>
-            <li class="nav-item-2">
-                <a href="index.html" class="z-[20]">BERANDA</a>
-            </li>
-            <li class="nav-item-2 active"><a href="fitur.html">FITUR</a></li>
-            <li class="nav-item-2"><a href="harga.html">HARGA</a></li>
-            <li class="nav-item-2 dropdown">
-                <div class="flex items-center gap-2 dropdown-btn">
-                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
-                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
-                </div>
+{% partial 'nav2' %}
 
-                <ul class="dropdown-item shadow-lg">
-                    <li><a href="retail.html">Retail</a></li>
-                    <li><a href="jasa.html">Jasa</a></li>
-                    <li><a href="food.html">Food & Beverage</a></li>
-                </ul>
-            </li>
-            </li>
-            <li class="nav-item-2 font-medium"><a href="artikel.html">ARTIKEL</a></li>
-            <li class=" nav-item-2"><a href="kontak_kami.html">KONTAK KAMI</a></li>
-            <li class="lgTablet:mt-0 mt-5">
-                <a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
-                    Login Dashboard</a>
-            </li>
-        </ul>
-        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
-            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
-        </div>
-    </nav>
-</header>
 
 <main>
     <section class="lg:mt-[150px] mt-[100px]">
@@ -164,7 +126,7 @@ section2fitur[7][right] = 1
 
             <div
                 class="bg-primary rounded-[40px] grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-10 mt-[92px] lg:h-[225px] lg:gap-0 gap-10">
-                <a class="flex flex-col items-center text-white" href="toko.html">
+                <a class="flex flex-col items-center text-white" href="{{ 'toko'|page }}">
                     <div
                         class="bg-[#922775] border-4 border-secondary w-[65px] h-[65px] rounded-[18px] flex items-center justify-center">
                         <svg viewBox="0 0 398 455" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[24px]">
@@ -179,7 +141,7 @@ section2fitur[7][right] = 1
                         }}
                     </div>
                 </a>
-                <a class="flex flex-col items-center text-white" href="kasir.html">
+                <a class="flex flex-col items-center text-white" href="{{ 'kasir'|page }}">
                     <div
                         class="bg-[#922775] border-4 border-secondary w-[65px] h-[65px] rounded-[18px] flex items-center justify-center">
                         <svg width="405" height="398" viewBox="0 0 405 398" fill="none"
@@ -197,7 +159,7 @@ section2fitur[7][right] = 1
                     </div>
                 </a>
                 <a class="flex flex-col items-center text-white lg:bg-[#FAA832] lg:h-[269px] lg:rounded-t-[40px] lg:pt-5 lg:w-[227px] lg:translate-x-[2.5rem] lg:-translate-y-[5.25rem]"
-                    href="dana.html">
+                    href="{{ 'dana'|page }}">
                     <div
                         class="lg:bg-[#FFC630] bg-[#922775] border-4 lg:border-[#FBE9B3] border-secondary w-[65px] h-[65px] rounded-[18px] flex items-center justify-center lg:mt-[15px]">
                         <svg width="412" height="362" viewBox="0 0 412 362" fill="none"
@@ -214,7 +176,7 @@ section2fitur[7][right] = 1
                         }}
                     </div>
                 </a>
-                <a class="flex flex-col items-center text-white" href="managemen.html">
+                <a class="flex flex-col items-center text-white" href="{{ 'managemen'|page }}">
                     <div
                         class="bg-[#922775] border-4 border-secondary w-[65px] h-[65px] rounded-[18px] flex items-center justify-center">
                         <svg width="398" height="412" viewBox="0 0 398 412" fill="none"
@@ -239,7 +201,7 @@ section2fitur[7][right] = 1
 </main>
 
 
-<footer class="mt-[100px] bg-third pt-20 pb-10">
+<footer class="bg-third pt-20 pb-10">
     <div class="container flex flex-col justify-center items-center gap-16">
         <ul class="flex lg:flex-row flex-col items-center justify-between gap-6 text-white">
             <li><a href="">BERANDA</a></li>
@@ -278,48 +240,10 @@ section2fitur[7][right] = 1
             </p>
         </div>
     </div>
-</footer>";s:5:"mtime";i:1660743797;s:6:"markup";s:17320:"{% set BASEURL = 'http://localhost/posbill_cms/' %}
+</footer>";s:5:"mtime";i:1660966593;s:6:"markup";s:15107:"{% set BASEURL = 'http://localhost/posbill_cms/' %}
 
-<header class="mx-auto bg-primary py-8">
-    <nav class="container flex items-center justify-between">
-        <a href="index.html" class="logo-navbar">
-            <img src="{{ 'assets/images/logo3.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
-        </a>
-        <ul
-            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
-            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
-                <span class="iconify" data-icon="ep:close-bold"></span>
-            </li>
-            <li class="nav-item-2">
-                <a href="index.html" class="z-[20]">BERANDA</a>
-            </li>
-            <li class="nav-item-2 active"><a href="fitur.html">FITUR</a></li>
-            <li class="nav-item-2"><a href="harga.html">HARGA</a></li>
-            <li class="nav-item-2 dropdown">
-                <div class="flex items-center gap-2 dropdown-btn">
-                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
-                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
-                </div>
+{% partial 'nav2' %}
 
-                <ul class="dropdown-item shadow-lg">
-                    <li><a href="retail.html">Retail</a></li>
-                    <li><a href="jasa.html">Jasa</a></li>
-                    <li><a href="food.html">Food & Beverage</a></li>
-                </ul>
-            </li>
-            </li>
-            <li class="nav-item-2 font-medium"><a href="artikel.html">ARTIKEL</a></li>
-            <li class=" nav-item-2"><a href="kontak_kami.html">KONTAK KAMI</a></li>
-            <li class="lgTablet:mt-0 mt-5">
-                <a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
-                    Login Dashboard</a>
-            </li>
-        </ul>
-        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
-            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
-        </div>
-    </nav>
-</header>
 
 <main>
     <section class="lg:mt-[150px] mt-[100px]">
@@ -377,7 +301,7 @@ section2fitur[7][right] = 1
 
             <div
                 class="bg-primary rounded-[40px] grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-10 mt-[92px] lg:h-[225px] lg:gap-0 gap-10">
-                <a class="flex flex-col items-center text-white" href="toko.html">
+                <a class="flex flex-col items-center text-white" href="{{ 'toko'|page }}">
                     <div
                         class="bg-[#922775] border-4 border-secondary w-[65px] h-[65px] rounded-[18px] flex items-center justify-center">
                         <svg viewBox="0 0 398 455" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[24px]">
@@ -392,7 +316,7 @@ section2fitur[7][right] = 1
                         }}
                     </div>
                 </a>
-                <a class="flex flex-col items-center text-white" href="kasir.html">
+                <a class="flex flex-col items-center text-white" href="{{ 'kasir'|page }}">
                     <div
                         class="bg-[#922775] border-4 border-secondary w-[65px] h-[65px] rounded-[18px] flex items-center justify-center">
                         <svg width="405" height="398" viewBox="0 0 405 398" fill="none"
@@ -410,7 +334,7 @@ section2fitur[7][right] = 1
                     </div>
                 </a>
                 <a class="flex flex-col items-center text-white lg:bg-[#FAA832] lg:h-[269px] lg:rounded-t-[40px] lg:pt-5 lg:w-[227px] lg:translate-x-[2.5rem] lg:-translate-y-[5.25rem]"
-                    href="dana.html">
+                    href="{{ 'dana'|page }}">
                     <div
                         class="lg:bg-[#FFC630] bg-[#922775] border-4 lg:border-[#FBE9B3] border-secondary w-[65px] h-[65px] rounded-[18px] flex items-center justify-center lg:mt-[15px]">
                         <svg width="412" height="362" viewBox="0 0 412 362" fill="none"
@@ -427,7 +351,7 @@ section2fitur[7][right] = 1
                         }}
                     </div>
                 </a>
-                <a class="flex flex-col items-center text-white" href="managemen.html">
+                <a class="flex flex-col items-center text-white" href="{{ 'managemen'|page }}">
                     <div
                         class="bg-[#922775] border-4 border-secondary w-[65px] h-[65px] rounded-[18px] flex items-center justify-center">
                         <svg width="398" height="412" viewBox="0 0 398 412" fill="none"
@@ -452,7 +376,7 @@ section2fitur[7][right] = 1
 </main>
 
 
-<footer class="mt-[100px] bg-third pt-20 pb-10">
+<footer class="bg-third pt-20 pb-10">
     <div class="container flex flex-col justify-center items-center gap-16">
         <ul class="flex lg:flex-row flex-col items-center justify-between gap-6 text-white">
             <li><a href="">BERANDA</a></li>

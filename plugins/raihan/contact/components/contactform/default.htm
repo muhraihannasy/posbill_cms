@@ -1,0 +1,49 @@
+<form class=" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]" data-request="onSubmit"
+    data-request-update="mypartial: '#myDiv'">
+    <div class=" flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10 px-6">
+        <img src="{{ 'assets/images/logo-c.png'|theme }}" alt="" class="w-[91px]">
+        <div class="text-[16px] font-medium">
+            {{ this.page.section2contact_description|raw }}
+        </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 grid-cols-1 md:px-10 px-6 gap-5 mt-10">
+        <input type="text" name="nama" placeholder="Nama" id="nama"
+            class=" bg-[#EBEBEB]  rounded-md h-[49px] pl-6 focus:outline-none text-[#868686]">
+        <input type="email" name="email" placeholder="Email" id="email"
+            class=" bg-[#EBEBEB]  rounded-md h-[49px] pl-6 focus:outline-none text-[#868686]">
+        <input type="number" name="phone" placeholder="No Telepon" id="phone"
+            class=" bg-[#EBEBEB]  rounded-md h-[49px] pl-6 focus:outline-none text-[#868686]">
+        <input type="text" name="alamat" placeholder="Alamat" id="alamat"
+            class=" bg-[#EBEBEB]  rounded-md h-[49px] pl-6 focus:outline-none text-[#868686] ">
+    </div>
+
+    <div class="md:px-10 px-6 mt-16">
+        <h2 class="font-semibold text-[#222222] text-[24px] mb-[26px]">Optional</h2>
+        <textarea name="detail" id="detail"
+            class="w-full h-[313px] bg-[#EBEBEB] rounded-md pt-4 pl-6 focus:outline-none text-[#868686]"
+            placeholder="Detail"></textarea>
+        <div
+            class="relative w-full bg-[#EBEBEB] rounded-md h-[102px]  focus:outline-none text-[#868686] mt-6 flex items-center justify-center ">
+            <input type="file"
+                class="border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md opacity-0 z-30 cursor-pointer"
+                id="file_report" onchange="loadFile(event)">
+            <div
+                class="border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md absolute flex items-center justify-center cursor-pointer">
+                <h5 class="sm:text-[16px] text-[10px] font-medium sm:translate-x-0 translate-x-[2rem] cursor-pointer"
+                    id="name_file">Tempel gambar
+                    disini
+                </h5>
+                <img src=" {{ 'assets/images/contact/icn-file.png'|theme }}" alt=""
+                    class="absolute w-[4.5rem] sm:left-[-0.4rem] left-[-0.15rem] cursor-pointer">
+            </div>
+
+        </div>
+        <button
+            class="bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary"
+            type="submit" id="btn-send">Kirim</button>
+    </div>
+
+
+
+</form>

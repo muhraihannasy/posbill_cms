@@ -70,10 +70,28 @@ class __TwigTemplate_fc2eb60191ba70d2984b12b18b7d2e5f9adc1e4f589cfd29e9d41d3c79e
         echo "    </main>
 
     <!-- Jquery -->
-    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"
-        integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+    <!-- <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"
+        integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script> -->
     <script src=\"";
         // line 25
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery.js");
+        echo "\"></script>
+    ";
+        // line 26
+        $_minify = System\Classes\CombineAssets::instance()->useMinify;
+        if ($_minify) {
+            echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
+        }
+        else {
+            echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.js"></script>'.PHP_EOL;
+            echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.extras.js"></script>'.PHP_EOL;
+        }
+        echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
+        unset($_minify);
+        // line 27
+        echo "
+    <script src=\"";
+        // line 28
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/owl.carousel.min.js");
         echo "\"></script>
 
@@ -83,11 +101,11 @@ class __TwigTemplate_fc2eb60191ba70d2984b12b18b7d2e5f9adc1e4f589cfd29e9d41d3c79e
 
     <!-- Custom JS -->
     <script src=\"";
-        // line 32
+        // line 35
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/app.js");
         echo "\"></script>
     <script src=\"";
-        // line 33
+        // line 36
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/carousel.js");
         echo "\"></script>
 </body>
@@ -107,7 +125,7 @@ class __TwigTemplate_fc2eb60191ba70d2984b12b18b7d2e5f9adc1e4f589cfd29e9d41d3c79e
 
     public function getDebugInfo()
     {
-        return array (  91 => 33,  87 => 32,  77 => 25,  70 => 20,  68 => 19,  59 => 13,  52 => 9,  48 => 8,  39 => 1,);
+        return array (  109 => 36,  105 => 35,  95 => 28,  92 => 27,  81 => 26,  77 => 25,  70 => 20,  68 => 19,  59 => 13,  52 => 9,  48 => 8,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -134,8 +152,11 @@ class __TwigTemplate_fc2eb60191ba70d2984b12b18b7d2e5f9adc1e4f589cfd29e9d41d3c79e
     </main>
 
     <!-- Jquery -->
-    <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"
-        integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+    <!-- <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"
+        integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script> -->
+    <script src=\"{{ 'assets/js/jquery.js'|theme }}\"></script>
+    {% framework extras %}
+
     <script src=\"{{ 'assets/js/owl.carousel.min.js'|theme }}\"></script>
 
 
@@ -152,13 +173,13 @@ class __TwigTemplate_fc2eb60191ba70d2984b12b18b7d2e5f9adc1e4f589cfd29e9d41d3c79e
     
     public function checkSecurity()
     {
-        static $tags = array("page" => 19);
+        static $tags = array("page" => 19, "framework" => 26);
         static $filters = array("theme" => 8);
         static $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['page'],
+                ['page', 'framework'],
                 ['theme'],
                 []
             );

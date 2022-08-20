@@ -39,63 +39,25 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
         $context["BASEURL"] = "http://localhost/posbill_cms/";
         // line 2
         echo "
-
-<header class=\"mx-auto bg-[#99125A] py-8\">
-    <nav class=\"container flex items-center justify-between\">
-        <a href=\"index.html\" class=\"logo-navbar\">
-            <img src=\"";
-        // line 7
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logo3.png");
-        echo "\" alt=\"Logo Posbill\" class=\"w-[250px]\">
-        </a>
-        <ul
-            class=\"navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6\">
-            <li class=\"lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6\">
-                <span class=\"iconify\" data-icon=\"ep:close-bold\"></span>
-            </li>
-            <li class=\"nav-item-2\">
-                <a href=\"index.html\" class=\"z-[20]\">BERANDA</a>
-            </li>
-            <li class=\"nav-item-2\"><a href=\"fitur.html\">FITUR</a></li>
-            <li class=\"nav-item-2\"><a href=\"harga.html\">HARGA</a></li>
-            <li class=\"nav-item-2 dropdown\">
-                <div class=\"flex items-center gap-2 dropdown-btn\">
-                    <a href=\"javascript:void(0)\">SOLUSI BISNIS</a>
-                    <span class=\"iconify\" data-icon=\"ep:arrow-down-bold\"></span>
-                </div>
-
-                <ul class=\"dropdown-item shadow-lg\">
-                    <li><a href=\"retail.html\">Retail</a></li>
-                    <li><a href=\"jasa.html\">Jasa</a></li>
-                    <li><a href=\"food.html\">Food & Beverage</a></li>
-                </ul>
-            </li>
-            </li>
-            <li class=\"nav-item-2 font-medium\"><a href=\"artikel.html\">ARTIKEL</a></li>
-            <li class=\" nav-item-2 active\"><a href=\"kontak_kami.html\">KONTAK KAMI</a></li>
-            <li class=\"lgTablet:mt-0 mt-5\">
-                <a href=\"login_dashboard.html\" class=\"rounded-full bg-secondary px-5 py-4 ml-2 text-primary\">
-                    Login Dashboard</a>
-            </li>
-        </ul>
-        <div class=\"lgTablet:hidden cursor-pointer btn-open-nav\">
-            <span class=\"iconify text-4xl text-white\" data-icon=\"fluent:list-16-filled\"></span>
-        </div>
-    </nav>
-</header>
-
+";
+        // line 3
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("nav2"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 4
+        echo "
 <main>
     <section class=\"bg-[#A71A65] lg:h-[500px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]\">
         <div class=\"container bg-\">
             <div class=\"lg:pt-20\">
                 <h2 class=\"font-semibold text-[36px] mb-[24px]\">";
-        // line 49
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 49), "section1contact_title", [], "any", false, false, true, 49), 49, $this->source), "html", null, true);
+        // line 9
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 9), "section1contact_title", [], "any", false, false, true, 9), 9, $this->source), "html", null, true);
         echo "</h2>
                 <div class=\"mb-[31px] lg:w-[591px] text-[24px] font-light\">
                     ";
-        // line 51
-        echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 51), "section1contact_description", [], "any", false, false, true, 51), 51, $this->source);
+        // line 11
+        echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 11), "section1contact_description", [], "any", false, false, true, 11), 11, $this->source);
         echo "
                 </div>
             </div>
@@ -144,41 +106,43 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
             <div>
                 <h2 class=\"w-[235px] text-[24px] font-semibold text-[#222222] mb-10 my-8\">
                     ";
-        // line 98
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 98), "section2contact_title", [], "any", false, false, true, 98), 98, $this->source), "html", null, true);
+        // line 58
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 58), "section2contact_title", [], "any", false, false, true, 58), 58, $this->source), "html", null, true);
         echo "
                 </h2>
 
                 <div class=\"lg:w-[239px] flex flex-col gap-8\">
                     ";
-        // line 102
+        // line 62
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["viewBag"] ?? null), "section2contact_2", [], "any", false, false, true, 102));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["viewBag"] ?? null), "section2contact_2", [], "any", false, false, true, 62));
         foreach ($context['_seq'] as $context["_key"] => $context["card"]) {
-            // line 103
+            // line 63
             echo "                    <img src=\"";
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["BASEURL"] ?? null), 103, $this->source), "html", null, true);
-            echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["card"], "image", [], "any", false, false, true, 103), 103, $this->source));
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["BASEURL"] ?? null), 63, $this->source), "html", null, true);
+            echo $this->extensions['System\Twig\Extension']->mediaFilter($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["card"], "image", [], "any", false, false, true, 63), 63, $this->source));
             echo "\" alt=\"\">
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['card'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 105
+        // line 65
         echo "                </div>
             </div>
-            <div class=\" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]\">
-                <div
-                    class=\"flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10 px-6\">
+            <!-- s -->
+            <form class=\" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]\"
+                data-request=\"onSubmit\" data-request-update=\"mytime: '#myDiv'\" data-request-files>
+                <div class=\" flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10
+                px-6\">
                     <img src=\"";
-        // line 110
+        // line 72
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logo-c.png");
         echo "\" alt=\"\" class=\"w-[91px]\">
                     <div class=\"text-[16px] font-medium\">
                         ";
-        // line 112
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 112), "section2contact_description", [], "any", false, false, true, 112), 112, $this->source), "html", null, true);
+        // line 74
+        echo $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 74), "section2contact_description", [], "any", false, false, true, 74), 74, $this->source);
         echo "
                     </div>
                 </div>
@@ -203,28 +167,39 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
                         class=\"relative w-full bg-[#EBEBEB] rounded-md h-[102px]  focus:outline-none text-[#868686] mt-6 flex items-center justify-center \">
                         <input type=\"file\"
                             class=\"border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md opacity-0 z-30 cursor-pointer\"
-                            id=\"file_report\">
+                            id=\"file_report\" onchange=\"loadFile(event)\" name=\"file_report\" accept=\"image/*\">
                         <div
                             class=\"border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md absolute flex items-center justify-center cursor-pointer\">
                             <h5 class=\"sm:text-[16px] text-[10px] font-medium sm:translate-x-0 translate-x-[2rem] cursor-pointer\"
                                 id=\"name_file\">Tempel gambar
                                 disini
                             </h5>
-                            <img src=\" ./assets/images/contact/icn-file.png\" alt=\"\"
+                            <img src=\" ";
+        // line 105
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/contact/icn-file.png");
+        echo "\" alt=\"\"
                                 class=\"absolute w-[4.5rem] sm:left-[-0.4rem] left-[-0.15rem] cursor-pointer\">
                         </div>
 
                     </div>
                     <button
-                        class=\"bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary\">Kirim</button>
+                        class=\"bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary\"
+                        id=\"btn-send\">Kirim</button>
                 </div>
-            </div>
+            </form>
+            <div id=\"myDiv\">";
+        // line 115
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("mytime"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        echo "</div>
+
         </div>
         <div class=\"container flex flex-col text-center justify-center items-center lg:mt-0 mt-10\">
             <div class=\"font-semibold\">
                 <h2 class=\"mb-5 text-[24px]\">";
-        // line 155
-        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 155), "section2contact_subtitle", [], "any", false, false, true, 155), 155, $this->source), "html", null, true);
+        // line 120
+        echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 120), "section2contact_subtitle", [], "any", false, false, true, 120), 120, $this->source), "html", null, true);
         echo "</h2>
                 <iframe src=\"https://www.youtube.com/embed/9vWMjHRsB-c\"
                     class=\"rounded-xl lg:w-[875px] lg:h-[492px] w-[100%] \" title=\"YouTube video player\" frameborder=\"0\"
@@ -248,7 +223,7 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
         </ul>
 
         <img src=\"";
-        // line 177
+        // line 142
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logo2.png");
         echo "\" alt=\"Logo Posbill\" class=\"w-[130.56px]\">
 
@@ -256,31 +231,31 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
             <ul class=\"flex items-center gap-5\">
                 <li>
                     <img src=\"";
-        // line 182
+        // line 147
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/icon/icn-fb.svg");
         echo "\" alt=\"Icon Facebook\" class=\"w-[35.6px]\">
                 </li>
                 <li>
                     <img src=\"";
-        // line 185
+        // line 150
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/icon/icn-wa.svg");
         echo "\" alt=\"Icon Whatsapp\" class=\"w-[33px]\">
                 </li>
                 <li>
                     <img src=\"";
-        // line 188
+        // line 153
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/icon/icn-yt.svg");
         echo "\" alt=\"Icon Youtube\" class=\"w-[46.02px]\">
                 </li>
                 <li>
                     <img src=\"";
-        // line 191
+        // line 156
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/icon/icn-eml.sv");
         echo "g\" alt=\"Icon Email\" class=\"w-[38px]\">
                 </li>
                 <li>
                     <img src=\"";
-        // line 194
+        // line 159
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/icon/icn-ig.svg");
         echo "\" alt=\"Icon Instagram\" class=\"w-[33px]\">
                 </li>
@@ -292,7 +267,47 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
             </p>
         </div>
     </div>
-</footer>";
+</footer>
+
+<script>
+    const name = document.querySelector(\"#nama\");
+    const email = document.querySelector(\"#email\");
+    const phone = document.querySelector(\"#phone\");
+    const address = document.querySelector(\"#alamat\");
+    const detail = document.querySelector(\"#detail\");
+    const fileReport = document.querySelector(\"#file_report\");
+    const meta = document.querySelector(\"meta[name='csrf-token']\");
+    console.log(meta)
+
+    const loadFile = function (event) {
+        const uri = URL.createObjectURL(event.target.files[0]);
+        // const uri2 = URL.revokeObjectURL(uri) // free memory
+        console.log(uri)
+    };
+
+    const btnSend = document.querySelector('#btn-send');
+
+    // btnSend.addEventListener(\"click\", () => {
+
+
+    //     const obj = {
+    //         name: name.value,
+    //         email: email.value,
+    //         phome: phone.value,
+    //         address: address.value,
+    //         detail: detail.value,
+    //         filereport: fileReport.value
+    //     }
+
+
+
+    //     fetch(`http://localhost/posbill_cms/data-contact/\${obj.name}/\${obj.email}/\${obj.phone}/\${obj.address}/\${obj.detail}`, { body: obj })
+    //     // window.location.href = `http://localhost/posbill_cms/data-contact/\${obj.name}/\${obj.email}/\${obj.phone}/\${obj.address}/\${obj.detail}/s`;
+
+    // });
+
+
+</script>";
     }
 
     public function getTemplateName()
@@ -307,54 +322,14 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
 
     public function getDebugInfo()
     {
-        return array (  284 => 194,  278 => 191,  272 => 188,  266 => 185,  260 => 182,  252 => 177,  227 => 155,  181 => 112,  176 => 110,  169 => 105,  159 => 103,  155 => 102,  148 => 98,  98 => 51,  93 => 49,  48 => 7,  41 => 2,  39 => 1,);
+        return array (  259 => 159,  253 => 156,  247 => 153,  241 => 150,  235 => 147,  227 => 142,  202 => 120,  192 => 115,  179 => 105,  145 => 74,  140 => 72,  131 => 65,  121 => 63,  117 => 62,  110 => 58,  60 => 11,  55 => 9,  48 => 4,  44 => 3,  41 => 2,  39 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% set BASEURL = 'http://localhost/posbill_cms/' %}
 
-
-<header class=\"mx-auto bg-[#99125A] py-8\">
-    <nav class=\"container flex items-center justify-between\">
-        <a href=\"index.html\" class=\"logo-navbar\">
-            <img src=\"{{ 'assets/images/logo3.png'|theme }}\" alt=\"Logo Posbill\" class=\"w-[250px]\">
-        </a>
-        <ul
-            class=\"navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6\">
-            <li class=\"lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6\">
-                <span class=\"iconify\" data-icon=\"ep:close-bold\"></span>
-            </li>
-            <li class=\"nav-item-2\">
-                <a href=\"index.html\" class=\"z-[20]\">BERANDA</a>
-            </li>
-            <li class=\"nav-item-2\"><a href=\"fitur.html\">FITUR</a></li>
-            <li class=\"nav-item-2\"><a href=\"harga.html\">HARGA</a></li>
-            <li class=\"nav-item-2 dropdown\">
-                <div class=\"flex items-center gap-2 dropdown-btn\">
-                    <a href=\"javascript:void(0)\">SOLUSI BISNIS</a>
-                    <span class=\"iconify\" data-icon=\"ep:arrow-down-bold\"></span>
-                </div>
-
-                <ul class=\"dropdown-item shadow-lg\">
-                    <li><a href=\"retail.html\">Retail</a></li>
-                    <li><a href=\"jasa.html\">Jasa</a></li>
-                    <li><a href=\"food.html\">Food & Beverage</a></li>
-                </ul>
-            </li>
-            </li>
-            <li class=\"nav-item-2 font-medium\"><a href=\"artikel.html\">ARTIKEL</a></li>
-            <li class=\" nav-item-2 active\"><a href=\"kontak_kami.html\">KONTAK KAMI</a></li>
-            <li class=\"lgTablet:mt-0 mt-5\">
-                <a href=\"login_dashboard.html\" class=\"rounded-full bg-secondary px-5 py-4 ml-2 text-primary\">
-                    Login Dashboard</a>
-            </li>
-        </ul>
-        <div class=\"lgTablet:hidden cursor-pointer btn-open-nav\">
-            <span class=\"iconify text-4xl text-white\" data-icon=\"fluent:list-16-filled\"></span>
-        </div>
-    </nav>
-</header>
+{% partial 'nav2' %}
 
 <main>
     <section class=\"bg-[#A71A65] lg:h-[500px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]\">
@@ -418,12 +393,14 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
                     {% endfor %}
                 </div>
             </div>
-            <div class=\" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]\">
-                <div
-                    class=\"flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10 px-6\">
+            <!-- s -->
+            <form class=\" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]\"
+                data-request=\"onSubmit\" data-request-update=\"mytime: '#myDiv'\" data-request-files>
+                <div class=\" flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10
+                px-6\">
                     <img src=\"{{ 'assets/images/logo-c.png'|theme }}\" alt=\"\" class=\"w-[91px]\">
                     <div class=\"text-[16px] font-medium\">
-                        {{ this.page.section2contact_description }}
+                        {{ this.page.section2contact_description|raw }}
                     </div>
                 </div>
 
@@ -447,22 +424,25 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
                         class=\"relative w-full bg-[#EBEBEB] rounded-md h-[102px]  focus:outline-none text-[#868686] mt-6 flex items-center justify-center \">
                         <input type=\"file\"
                             class=\"border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md opacity-0 z-30 cursor-pointer\"
-                            id=\"file_report\">
+                            id=\"file_report\" onchange=\"loadFile(event)\" name=\"file_report\" accept=\"image/*\">
                         <div
                             class=\"border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md absolute flex items-center justify-center cursor-pointer\">
                             <h5 class=\"sm:text-[16px] text-[10px] font-medium sm:translate-x-0 translate-x-[2rem] cursor-pointer\"
                                 id=\"name_file\">Tempel gambar
                                 disini
                             </h5>
-                            <img src=\" ./assets/images/contact/icn-file.png\" alt=\"\"
+                            <img src=\" {{ 'assets/images/contact/icn-file.png'|theme }}\" alt=\"\"
                                 class=\"absolute w-[4.5rem] sm:left-[-0.4rem] left-[-0.15rem] cursor-pointer\">
                         </div>
 
                     </div>
                     <button
-                        class=\"bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary\">Kirim</button>
+                        class=\"bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary\"
+                        id=\"btn-send\">Kirim</button>
                 </div>
-            </div>
+            </form>
+            <div id=\"myDiv\">{% partial 'mytime' %}</div>
+
         </div>
         <div class=\"container flex flex-col text-center justify-center items-center lg:mt-0 mt-10\">
             <div class=\"font-semibold\">
@@ -515,19 +495,59 @@ class __TwigTemplate_014b6bddeb7be37ebab5a3b8a19e04bd655b8a99f5b07cc1ec3779b97ed
             </p>
         </div>
     </div>
-</footer>", "C:\\xampp\\htdocs\\posbill_cms/themes/posbill/pages/kontak-kami.htm", "");
+</footer>
+
+<script>
+    const name = document.querySelector(\"#nama\");
+    const email = document.querySelector(\"#email\");
+    const phone = document.querySelector(\"#phone\");
+    const address = document.querySelector(\"#alamat\");
+    const detail = document.querySelector(\"#detail\");
+    const fileReport = document.querySelector(\"#file_report\");
+    const meta = document.querySelector(\"meta[name='csrf-token']\");
+    console.log(meta)
+
+    const loadFile = function (event) {
+        const uri = URL.createObjectURL(event.target.files[0]);
+        // const uri2 = URL.revokeObjectURL(uri) // free memory
+        console.log(uri)
+    };
+
+    const btnSend = document.querySelector('#btn-send');
+
+    // btnSend.addEventListener(\"click\", () => {
+
+
+    //     const obj = {
+    //         name: name.value,
+    //         email: email.value,
+    //         phome: phone.value,
+    //         address: address.value,
+    //         detail: detail.value,
+    //         filereport: fileReport.value
+    //     }
+
+
+
+    //     fetch(`http://localhost/posbill_cms/data-contact/\${obj.name}/\${obj.email}/\${obj.phone}/\${obj.address}/\${obj.detail}`, { body: obj })
+    //     // window.location.href = `http://localhost/posbill_cms/data-contact/\${obj.name}/\${obj.email}/\${obj.phone}/\${obj.address}/\${obj.detail}/s`;
+
+    // });
+
+
+</script>", "C:\\xampp\\htdocs\\posbill_cms/themes/posbill/pages/kontak-kami.htm", "");
     }
     
     public function checkSecurity()
     {
-        static $tags = array("set" => 1, "for" => 102);
-        static $filters = array("theme" => 7, "escape" => 49, "raw" => 51, "media" => 103);
+        static $tags = array("set" => 1, "partial" => 3, "for" => 62);
+        static $filters = array("escape" => 9, "raw" => 11, "media" => 63, "theme" => 72);
         static $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['set', 'for'],
-                ['theme', 'escape', 'raw', 'media'],
+                ['set', 'partial', 'for'],
+                ['escape', 'raw', 'media', 'theme'],
                 []
             );
         } catch (SecurityError $e) {

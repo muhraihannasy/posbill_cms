@@ -1,4 +1,4 @@
-1660839764a:1:{s:15:"kontak-kami.htm";a:15:{s:8:"fileName";s:15:"kontak-kami.htm";s:7:"content";s:15846:"title = "Kontak Kami"
+1661017895a:1:{s:15:"kontak-kami.htm";a:16:{s:8:"fileName";s:15:"kontak-kami.htm";s:7:"content";s:15283:"title = "Kontak Kami"
 url = "/kontak-kami"
 layout = "default"
 is_hidden = 0
@@ -15,50 +15,12 @@ section2contact_description = "<p>Jika anda memiliki pertanyaan dan membutuhkan 
 section2contact_2[0][image] = "/img-1k.png"
 section2contact_2[1][image] = "/img-2.png"
 section2contact_2[2][image] = "/img-3.png"
+
+[contactform]
 ==
 {% set BASEURL = 'http://localhost/posbill_cms/' %}
 
-
-<header class="mx-auto bg-[#99125A] py-8">
-    <nav class="container flex items-center justify-between">
-        <a href="index.html" class="logo-navbar">
-            <img src="{{ 'assets/images/logo3.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
-        </a>
-        <ul
-            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
-            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
-                <span class="iconify" data-icon="ep:close-bold"></span>
-            </li>
-            <li class="nav-item-2">
-                <a href="index.html" class="z-[20]">BERANDA</a>
-            </li>
-            <li class="nav-item-2"><a href="fitur.html">FITUR</a></li>
-            <li class="nav-item-2"><a href="harga.html">HARGA</a></li>
-            <li class="nav-item-2 dropdown">
-                <div class="flex items-center gap-2 dropdown-btn">
-                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
-                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
-                </div>
-
-                <ul class="dropdown-item shadow-lg">
-                    <li><a href="retail.html">Retail</a></li>
-                    <li><a href="jasa.html">Jasa</a></li>
-                    <li><a href="food.html">Food & Beverage</a></li>
-                </ul>
-            </li>
-            </li>
-            <li class="nav-item-2 font-medium"><a href="artikel.html">ARTIKEL</a></li>
-            <li class=" nav-item-2 active"><a href="kontak_kami.html">KONTAK KAMI</a></li>
-            <li class="lgTablet:mt-0 mt-5">
-                <a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
-                    Login Dashboard</a>
-            </li>
-        </ul>
-        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
-            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
-        </div>
-    </nav>
-</header>
+{% partial 'nav2' %}
 
 <main>
     <section class="bg-[#A71A65] lg:h-[500px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]">
@@ -122,12 +84,14 @@ section2contact_2[2][image] = "/img-3.png"
                     {% endfor %}
                 </div>
             </div>
-            <div class=" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]">
-                <div
-                    class="flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10 px-6">
+            <!-- s -->
+            <form class=" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]"
+                data-request="onSubmit" data-request-update="mytime: '#myDiv'" data-request-files>
+                <div class=" flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10
+                px-6">
                     <img src="{{ 'assets/images/logo-c.png'|theme }}" alt="" class="w-[91px]">
                     <div class="text-[16px] font-medium">
-                        {{ this.page.section2contact_description }}
+                        {{ this.page.section2contact_description|raw }}
                     </div>
                 </div>
 
@@ -151,22 +115,25 @@ section2contact_2[2][image] = "/img-3.png"
                         class="relative w-full bg-[#EBEBEB] rounded-md h-[102px]  focus:outline-none text-[#868686] mt-6 flex items-center justify-center ">
                         <input type="file"
                             class="border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md opacity-0 z-30 cursor-pointer"
-                            id="file_report">
+                            id="file_report" onchange="loadFile(event)" name="file_report" accept="image/*">
                         <div
                             class="border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md absolute flex items-center justify-center cursor-pointer">
                             <h5 class="sm:text-[16px] text-[10px] font-medium sm:translate-x-0 translate-x-[2rem] cursor-pointer"
                                 id="name_file">Tempel gambar
                                 disini
                             </h5>
-                            <img src=" ./assets/images/contact/icn-file.png" alt=""
+                            <img src=" {{ 'assets/images/contact/icn-file.png'|theme }}" alt=""
                                 class="absolute w-[4.5rem] sm:left-[-0.4rem] left-[-0.15rem] cursor-pointer">
                         </div>
 
                     </div>
                     <button
-                        class="bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary">Kirim</button>
+                        class="bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary"
+                        id="btn-send">Kirim</button>
                 </div>
-            </div>
+            </form>
+            <div id="myDiv">{% partial 'mytime' %}</div>
+
         </div>
         <div class="container flex flex-col text-center justify-center items-center lg:mt-0 mt-10">
             <div class="font-semibold">
@@ -219,49 +186,49 @@ section2contact_2[2][image] = "/img-3.png"
             </p>
         </div>
     </div>
-</footer>";s:5:"mtime";i:1660839151;s:6:"markup";s:15141:"{% set BASEURL = 'http://localhost/posbill_cms/' %}
+</footer>
+
+<script>
+    const name = document.querySelector("#nama");
+    const email = document.querySelector("#email");
+    const phone = document.querySelector("#phone");
+    const address = document.querySelector("#alamat");
+    const detail = document.querySelector("#detail");
+    const fileReport = document.querySelector("#file_report");
+    const meta = document.querySelector("meta[name='csrf-token']");
+    console.log(meta)
+
+    const loadFile = function (event) {
+        const uri = URL.createObjectURL(event.target.files[0]);
+        // const uri2 = URL.revokeObjectURL(uri) // free memory
+        console.log(uri)
+    };
+
+    const btnSend = document.querySelector('#btn-send');
+
+    // btnSend.addEventListener("click", () => {
 
 
-<header class="mx-auto bg-[#99125A] py-8">
-    <nav class="container flex items-center justify-between">
-        <a href="index.html" class="logo-navbar">
-            <img src="{{ 'assets/images/logo3.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
-        </a>
-        <ul
-            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
-            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
-                <span class="iconify" data-icon="ep:close-bold"></span>
-            </li>
-            <li class="nav-item-2">
-                <a href="index.html" class="z-[20]">BERANDA</a>
-            </li>
-            <li class="nav-item-2"><a href="fitur.html">FITUR</a></li>
-            <li class="nav-item-2"><a href="harga.html">HARGA</a></li>
-            <li class="nav-item-2 dropdown">
-                <div class="flex items-center gap-2 dropdown-btn">
-                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
-                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
-                </div>
+    //     const obj = {
+    //         name: name.value,
+    //         email: email.value,
+    //         phome: phone.value,
+    //         address: address.value,
+    //         detail: detail.value,
+    //         filereport: fileReport.value
+    //     }
 
-                <ul class="dropdown-item shadow-lg">
-                    <li><a href="retail.html">Retail</a></li>
-                    <li><a href="jasa.html">Jasa</a></li>
-                    <li><a href="food.html">Food & Beverage</a></li>
-                </ul>
-            </li>
-            </li>
-            <li class="nav-item-2 font-medium"><a href="artikel.html">ARTIKEL</a></li>
-            <li class=" nav-item-2 active"><a href="kontak_kami.html">KONTAK KAMI</a></li>
-            <li class="lgTablet:mt-0 mt-5">
-                <a href="login_dashboard.html" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
-                    Login Dashboard</a>
-            </li>
-        </ul>
-        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
-            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
-        </div>
-    </nav>
-</header>
+
+
+    //     fetch(`http://localhost/posbill_cms/data-contact/${obj.name}/${obj.email}/${obj.phone}/${obj.address}/${obj.detail}`, { body: obj })
+    //     // window.location.href = `http://localhost/posbill_cms/data-contact/${obj.name}/${obj.email}/${obj.phone}/${obj.address}/${obj.detail}/s`;
+
+    // });
+
+
+</script>";s:5:"mtime";i:1661017233;s:6:"markup";s:14561:"{% set BASEURL = 'http://localhost/posbill_cms/' %}
+
+{% partial 'nav2' %}
 
 <main>
     <section class="bg-[#A71A65] lg:h-[500px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]">
@@ -325,12 +292,14 @@ section2contact_2[2][image] = "/img-3.png"
                     {% endfor %}
                 </div>
             </div>
-            <div class=" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]">
-                <div
-                    class="flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10 px-6">
+            <!-- s -->
+            <form class=" bg-white rounded-xl shadow-lg overflow-hidden lg:-translate-y-[11.7rem]"
+                data-request="onSubmit" data-request-update="mytime: '#myDiv'" data-request-files>
+                <div class=" flex md:flex-row flex-col items-center justify-between gap-10 bg-[#F2F2F2] py-10 md:px-10
+                px-6">
                     <img src="{{ 'assets/images/logo-c.png'|theme }}" alt="" class="w-[91px]">
                     <div class="text-[16px] font-medium">
-                        {{ this.page.section2contact_description }}
+                        {{ this.page.section2contact_description|raw }}
                     </div>
                 </div>
 
@@ -354,22 +323,25 @@ section2contact_2[2][image] = "/img-3.png"
                         class="relative w-full bg-[#EBEBEB] rounded-md h-[102px]  focus:outline-none text-[#868686] mt-6 flex items-center justify-center ">
                         <input type="file"
                             class="border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md opacity-0 z-30 cursor-pointer"
-                            id="file_report">
+                            id="file_report" onchange="loadFile(event)" name="file_report" accept="image/*">
                         <div
                             class="border-[3px] h-[70%] w-[95%] border-white border-dashed rounded-md absolute flex items-center justify-center cursor-pointer">
                             <h5 class="sm:text-[16px] text-[10px] font-medium sm:translate-x-0 translate-x-[2rem] cursor-pointer"
                                 id="name_file">Tempel gambar
                                 disini
                             </h5>
-                            <img src=" ./assets/images/contact/icn-file.png" alt=""
+                            <img src=" {{ 'assets/images/contact/icn-file.png'|theme }}" alt=""
                                 class="absolute w-[4.5rem] sm:left-[-0.4rem] left-[-0.15rem] cursor-pointer">
                         </div>
 
                     </div>
                     <button
-                        class="bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary">Kirim</button>
+                        class="bg-primary w-full flex items-center justify-center py-4 mt-[49px] mb-10 rounded-md text-white transition hover:bg-secondary"
+                        id="btn-send">Kirim</button>
                 </div>
-            </div>
+            </form>
+            <div id="myDiv">{% partial 'mytime' %}</div>
+
         </div>
         <div class="container flex flex-col text-center justify-center items-center lg:mt-0 mt-10">
             <div class="font-semibold">
@@ -422,7 +394,47 @@ section2contact_2[2][image] = "/img-3.png"
             </p>
         </div>
     </div>
-</footer>";s:4:"code";N;s:5:"title";s:11:"Kontak Kami";s:3:"url";s:12:"/kontak-kami";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:21:"section1contact_title";s:11:"Kontak kami";s:27:"section1contact_description";s:91:"<p>Mencari Aplikasi kasir untuk mempermudah bisnismu?</p>
+</footer>
+
+<script>
+    const name = document.querySelector("#nama");
+    const email = document.querySelector("#email");
+    const phone = document.querySelector("#phone");
+    const address = document.querySelector("#alamat");
+    const detail = document.querySelector("#detail");
+    const fileReport = document.querySelector("#file_report");
+    const meta = document.querySelector("meta[name='csrf-token']");
+    console.log(meta)
+
+    const loadFile = function (event) {
+        const uri = URL.createObjectURL(event.target.files[0]);
+        // const uri2 = URL.revokeObjectURL(uri) // free memory
+        console.log(uri)
+    };
+
+    const btnSend = document.querySelector('#btn-send');
+
+    // btnSend.addEventListener("click", () => {
+
+
+    //     const obj = {
+    //         name: name.value,
+    //         email: email.value,
+    //         phome: phone.value,
+    //         address: address.value,
+    //         detail: detail.value,
+    //         filereport: fileReport.value
+    //     }
+
+
+
+    //     fetch(`http://localhost/posbill_cms/data-contact/${obj.name}/${obj.email}/${obj.phone}/${obj.address}/${obj.detail}`, { body: obj })
+    //     // window.location.href = `http://localhost/posbill_cms/data-contact/${obj.name}/${obj.email}/${obj.phone}/${obj.address}/${obj.detail}/s`;
+
+    // });
+
+
+</script>";s:4:"code";N;s:5:"title";s:11:"Kontak Kami";s:3:"url";s:12:"/kontak-kami";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:21:"section1contact_title";s:11:"Kontak kami";s:27:"section1contact_description";s:91:"<p>Mencari Aplikasi kasir untuk mempermudah bisnismu?</p>
 
 <p>kamu telah menemukannya</p>";s:21:"section2contact_title";s:25:"Kepoin yuk Instagram kami";s:24:"section2contact_subtitle";s:18:"Video demo POSbill";s:27:"section2contact_description";s:175:"<p>Jika anda memiliki pertanyaan dan membutuhkan bantuan seputar layanan kami, jangan
-    ragu untuk menghubungi kami! Kami juga menerima masukan berupa kritik dan saran.</p>";s:7:"viewBag";a:1:{s:17:"section2contact_2";a:3:{i:0;a:1:{s:5:"image";s:11:"/img-1k.png";}i:1;a:1:{s:5:"image";s:10:"/img-2.png";}i:2;a:1:{s:5:"image";s:10:"/img-3.png";}}}}}
+    ragu untuk menghubungi kami! Kami juga menerima masukan berupa kritik dan saran.</p>";s:7:"viewBag";a:1:{s:17:"section2contact_2";a:3:{i:0;a:1:{s:5:"image";s:11:"/img-1k.png";}i:1;a:1:{s:5:"image";s:10:"/img-2.png";}i:2;a:1:{s:5:"image";s:10:"/img-3.png";}}}s:11:"contactform";a:0:{}}}
