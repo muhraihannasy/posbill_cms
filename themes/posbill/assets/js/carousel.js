@@ -2,7 +2,7 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     margin:60,
     nav:true,
-    navText: ["<img src='http://127.0.0.1:5500/assets/images/home/icn-l.png' class='prev owl-prev'> ","<img src='http://127.0.0.1:5500/assets/images/home/icn-r.png' class='next owl-next'>"],
+    navText: ["<img src='http://127.0.0.1:8000/themes/posbill/assets/images/home/icn-l.png' class='prev owl-prev'> ","<img src='http://127.0.0.1:8000/themes/posbill/assets/images/home/icn-r.png' class='next owl-next'>"],
     responsiveClass:true,
     responsive:{
         0:{

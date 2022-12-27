@@ -1,21 +1,22 @@
-const BASEURL = 'http://localhost/posbill_cms/themes/posbill';
+const BASEURL = "http://127.0.0.1:8000/themes/posbill";
 
 // Logo Navbar
 const logoContainer = document.querySelector(".logo-navbar");
 const uriImg = BASEURL + "/assets/images/logo3.png";
-if(window.innerWidth < 949) logoContainer.innerHTML = `<img src="${uriImg}" alt="Logo Posbill" class="w-[200px]">`; 
+if (window.innerWidth < 949)
+  logoContainer.innerHTML = `<img src="${uriImg}" alt="Logo Posbill" class="w-[200px]">`;
 
-// Navbar Toggle 
+// Navbar Toggle
 const navbar = document.querySelector(".navbar");
 const btnNavOpen = document.querySelector(".btn-open-nav");
 const btnNavClose = document.querySelector(".btn-close-nav");
 
 btnNavOpen.addEventListener("click", () => {
-    navbar.classList.add("active");
+  navbar.classList.add("active");
 });
 
 btnNavClose.addEventListener("click", () => {
-    navbar.classList.remove("active");
+  navbar.classList.remove("active");
 });
 
 // Dropdown Mobile
@@ -29,19 +30,18 @@ function myFunction(x) {
   if (!x.matches) return;
 
   dropdownBtn.addEventListener("click", () => {
-      dropdownUl.classList.toggle("active");
+    dropdownUl.classList.toggle("active");
   });
 
-//   for (let i = 0; i < dropdownUl.length; i++) {
-//     const elementDropdown = dropdown[i];
-//     const elementDropdownUl = dropdownUl[i];
-//     const dropdownBtn = dropdownBtn[i];
+  //   for (let i = 0; i < dropdownUl.length; i++) {
+  //     const elementDropdown = dropdown[i];
+  //     const elementDropdownUl = dropdownUl[i];
+  //     const dropdownBtn = dropdownBtn[i];
 
-//     dropdownBtn.addEventListener("click", () => {
-//       elementDropdownUl.classList.toggle("active");
-//     });
-//   }
-};
+  //     dropdownBtn.addEventListener("click", () => {
+  //       elementDropdownUl.classList.toggle("active");
+  //     });
+  //   }
+}
 
 myFunction(x);
-

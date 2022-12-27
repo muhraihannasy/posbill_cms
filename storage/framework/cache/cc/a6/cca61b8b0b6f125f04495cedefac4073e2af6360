@@ -1,0 +1,309 @@
+1672143960a:1:{s:10:"retail.htm";a:19:{s:8:"fileName";s:10:"retail.htm";s:7:"content";s:7556:"title = "Retail"
+url = "/retail"
+layout = "default"
+is_hidden = 0
+section1retail_title = "Gali potensi usaha ritel Anda dengan aplikasi kasir toko"
+section1retail_subtitle = "Retail"
+section1retail_description = "<p>Sistem aplikasi Point of Sale yang memahami kebutuhan Anda.</p>"
+section1retail_text_btn = "Daftar sekarang"
+section1retail_background = "/bg.png"
+section2retail_title = "Punya beribu-ribu produk? POSbill bisa mengelola hingga beribu-ribu ribu SKU produk"
+section2retail_image = "/img-1r.png"
+section3retail_title = "Jual Lebih Banyak dari Mana Saja"
+
+[viewBag]
+section3retail_2[0][title] = "Kelola ribuan SKU produk lebih mudah"
+section3retail_2[0][description] = "<p style=\"text-align: right;\">Tidak ada lagi kewalahan dengan produk sendiri
+    karena Moka punya rekap produk real-time. &nbsp;</p>"
+section3retail_2[0][image] = "/img-2r.png"
+section3retail_2[0][right] = 1
+section3retail_2[1][title] = "Jualan grosir dan ritel"
+section3retail_2[1][description] = "<p>Pasang banyak harga untuk satu produk sesuai dengan jenis dan variasi
+    penjualannya. Jual grosir atau ritel? Buat berbagai varian? Semua bisa.</p>"
+section3retail_2[1][image] = "/img-3r.png"
+section3retail_2[1][right] = 0
+section3retail_2[2][title] = "Buat keputusan bisnis yang strategis"
+section3retail_2[2][description] = "<p style=\"text-align: right;\">Butuh membuat keputusan lebih cepat? Lihat data dari
+    produk terlaris Anda, jam terbaik, dan metode pembayaran yang lebih disukai. Semua dibuat di laporan terpisah, jadi
+    Anda tidak akan ketinggalan info penting apapun.</p>"
+section3retail_2[2][image] = "/img-4r.png"
+section3retail_2[2][right] = 1
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+{% set BASEURL = 'http://127.0.0.1:8000' %}
+
+{% partial 'nav2' %}
+
+
+
+<main>
+    <section class="bg-no-repeat bg-center bg-cover h-[644px] flex items-center text-white"
+        style="background-image: url('{{ BASEURL }}{{  this.page.section1retail_background|media }}')">
+        <div class="container ">
+            <h2 class="font-semibold text-[24px] mb-[29px]">{{ this.page.section1retail_subtitle }}</h2>
+            <h2 class="font-semibold md:text-[48px] sm:w-[565px] text-[40px] leading-tight mb-[20px]">
+                {{ this.page.section1retail_title }}
+            </h2>
+            <div class="mb-[31px] w-[597px] font-semibold">
+                {{ this.page.section1retail_description|raw }}
+            </div>
+            <a href="http://wa.me/6285157220258" class="btn-gradient2 text-[#222222]">{{ this.page.section1retail_text_btn }}</a>
+        </div>
+    </section>
+
+    <section class="bg-fivety py-24">
+        <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10">
+            <div class="flex items-center">
+                <img src="{{ BASEURL }}{{ this.page.section2retail_image|media }}" alt=""
+                    class="lg:w-[519px] rounded-md">
+            </div>
+            <div class="flex items-center">
+                <div class="font-semibold text-[24px] text-[#222222] lg:w-[436px]">
+                    {{ this.page.section2retail_title }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[70px]">
+        <div class="container">
+            <h2 class="font-semibold text-[#222222] text-[32px] text-center mb-[100px]">
+                {{ this.page.section3retail_title }}
+            </h2>
+
+            {% for card in viewBag.section3retail_2 %}
+            {% if card.right == true %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="lg:text-right font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="lg:text-right text-[20px] paragraf">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+            </div>
+            {% else %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[20px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="mt-[100px] bg-fivety py-12">
+        <div class="container">
+            <h2 class="text-[32px] font-semibold text-[#222222] mb-[38px]">Artikel POSbill</h2>
+
+
+            {% set posts = blogPosts.posts %}
+
+            <ul class="post-list grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-28">
+                {% for post in posts %}
+
+                <li>
+                    <a href="{{ post.url }}">
+                        {% if post.featured_images.count %}
+                        <div class="featured-images text-center">
+                            {% for image in post.featured_images %}
+                            <p>
+                                <img data-src="{{ image.filename }}" src="{{ image.path }}"
+                                    alt="{{ image.description }}" class="w-full" />
+                            </p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <h3 class="font-medium text-[16px] mt-4"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="excerpt text-[14px] mt-5">{{ post.summary|raw }}</p>
+                    </a>
+                    <a href="{{ post.url }}" class="flex items-center gap-4 text-primary mt-2">
+                        Selengkapnya
+                        <span class="iconify" data-icon="charm:arrow-right"></span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+                {% endfor %}
+            </ul>
+
+            {% if posts.lastPage > 1 %}
+            <ul class="pagination">
+                {% if posts.currentPage > 1 %}
+                <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr;
+                        Prev</a></li>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                    <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
+                </li>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next
+                        &rarr;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </div>
+    </section>
+
+</main>
+
+{% partial 'floatwa' %}
+{% partial 'footer' %}
+";s:5:"mtime";i:1672115239;s:6:"markup";s:5681:"{% set BASEURL = 'http://127.0.0.1:8000' %}
+
+{% partial 'nav2' %}
+
+
+
+<main>
+    <section class="bg-no-repeat bg-center bg-cover h-[644px] flex items-center text-white"
+        style="background-image: url('{{ BASEURL }}{{  this.page.section1retail_background|media }}')">
+        <div class="container ">
+            <h2 class="font-semibold text-[24px] mb-[29px]">{{ this.page.section1retail_subtitle }}</h2>
+            <h2 class="font-semibold md:text-[48px] sm:w-[565px] text-[40px] leading-tight mb-[20px]">
+                {{ this.page.section1retail_title }}
+            </h2>
+            <div class="mb-[31px] w-[597px] font-semibold">
+                {{ this.page.section1retail_description|raw }}
+            </div>
+            <a href="http://wa.me/6285157220258" class="btn-gradient2 text-[#222222]">{{ this.page.section1retail_text_btn }}</a>
+        </div>
+    </section>
+
+    <section class="bg-fivety py-24">
+        <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10">
+            <div class="flex items-center">
+                <img src="{{ BASEURL }}{{ this.page.section2retail_image|media }}" alt=""
+                    class="lg:w-[519px] rounded-md">
+            </div>
+            <div class="flex items-center">
+                <div class="font-semibold text-[24px] text-[#222222] lg:w-[436px]">
+                    {{ this.page.section2retail_title }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[70px]">
+        <div class="container">
+            <h2 class="font-semibold text-[#222222] text-[32px] text-center mb-[100px]">
+                {{ this.page.section3retail_title }}
+            </h2>
+
+            {% for card in viewBag.section3retail_2 %}
+            {% if card.right == true %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="lg:text-right font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="lg:text-right text-[20px] paragraf">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+            </div>
+            {% else %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[20px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="mt-[100px] bg-fivety py-12">
+        <div class="container">
+            <h2 class="text-[32px] font-semibold text-[#222222] mb-[38px]">Artikel POSbill</h2>
+
+
+            {% set posts = blogPosts.posts %}
+
+            <ul class="post-list grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-28">
+                {% for post in posts %}
+
+                <li>
+                    <a href="{{ post.url }}">
+                        {% if post.featured_images.count %}
+                        <div class="featured-images text-center">
+                            {% for image in post.featured_images %}
+                            <p>
+                                <img data-src="{{ image.filename }}" src="{{ image.path }}"
+                                    alt="{{ image.description }}" class="w-full" />
+                            </p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <h3 class="font-medium text-[16px] mt-4"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="excerpt text-[14px] mt-5">{{ post.summary|raw }}</p>
+                    </a>
+                    <a href="{{ post.url }}" class="flex items-center gap-4 text-primary mt-2">
+                        Selengkapnya
+                        <span class="iconify" data-icon="charm:arrow-right"></span>
+                    </a>
+                </li>
+                {% else %}
+                <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+                {% endfor %}
+            </ul>
+
+            {% if posts.lastPage > 1 %}
+            <ul class="pagination">
+                {% if posts.currentPage > 1 %}
+                <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr;
+                        Prev</a></li>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                    <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
+                </li>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next
+                        &rarr;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </div>
+    </section>
+
+</main>
+
+{% partial 'floatwa' %}
+{% partial 'footer' %}";s:4:"code";N;s:5:"title";s:6:"Retail";s:3:"url";s:7:"/retail";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:20:"section1retail_title";s:56:"Gali potensi usaha ritel Anda dengan aplikasi kasir toko";s:23:"section1retail_subtitle";s:6:"Retail";s:26:"section1retail_description";s:66:"<p>Sistem aplikasi Point of Sale yang memahami kebutuhan Anda.</p>";s:23:"section1retail_text_btn";s:15:"Daftar sekarang";s:25:"section1retail_background";s:7:"/bg.png";s:20:"section2retail_title";s:83:"Punya beribu-ribu produk? POSbill bisa mengelola hingga beribu-ribu ribu SKU produk";s:20:"section2retail_image";s:11:"/img-1r.png";s:20:"section3retail_title";s:32:"Jual Lebih Banyak dari Mana Saja";s:7:"viewBag";a:1:{s:16:"section3retail_2";a:3:{i:0;a:4:{s:5:"title";s:36:"Kelola ribuan SKU produk lebih mudah";s:11:"description";s:134:"<p style="text-align: right;">Tidak ada lagi kewalahan dengan produk sendiri
+    karena Moka punya rekap produk real-time. &nbsp;</p>";s:5:"image";s:11:"/img-2r.png";s:5:"right";s:1:"1";}i:1;a:4:{s:5:"title";s:23:"Jualan grosir dan ritel";s:11:"description";s:153:"<p>Pasang banyak harga untuk satu produk sesuai dengan jenis dan variasi
+    penjualannya. Jual grosir atau ritel? Buat berbagai varian? Semua bisa.</p>";s:5:"image";s:11:"/img-3r.png";s:5:"right";s:1:"0";}i:2;a:4:{s:5:"title";s:36:"Buat keputusan bisnis yang strategis";s:11:"description";s:261:"<p style="text-align: right;">Butuh membuat keputusan lebih cepat? Lihat data dari
+    produk terlaris Anda, jam terbaik, dan metode pembayaran yang lebih disukai. Semua dibuat di laporan terpisah, jadi
+    Anda tidak akan ketinggalan info penting apapun.</p>";s:5:"image";s:11:"/img-4r.png";s:5:"right";s:1:"1";}}}s:9:"blogPosts";a:6:{s:10:"pageNumber";s:11:"{{ :page }}";s:12:"postsPerPage";s:2:"10";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";}}}

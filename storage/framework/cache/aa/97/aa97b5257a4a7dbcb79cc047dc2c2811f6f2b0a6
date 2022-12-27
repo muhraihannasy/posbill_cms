@@ -1,0 +1,550 @@
+1672143960a:1:{s:11:"beranda.htm";a:39:{s:8:"fileName";s:11:"beranda.htm";s:7:"content";s:16360:"title = "Beranda"
+url = "/"
+layout = "default"
+is_hidden = 0
+section1home_title = "Aplikasi POS Kasir UMKM Terbaik"
+section1home_description = "<p>Catat penjualan, stok barang, dan laporan&nbsp;</p>
+
+<p>dengan mudah dan praktis.&nbsp;</p>
+
+<p>
+	<br>
+</p>
+
+<p>
+	<br>
+</p>
+
+<p>Gratis 1 bulan pertama</p>"
+section1home_text_btn = "Download sekarang"
+section1home_image = "/phone_home1.png"
+section1home_link_donwload = "https://play.google.com/store/apps/details?id=app.posbill.id&hl=en&gl=US&pli=1"
+section2home_title = "FITUR POSBILL"
+section2home_image = "/phone_home2.png"
+section3home_title = "Aplikasi Dashboard"
+section3home_description = "<p style=\"text-align: right;\">Satu aplikasi bisnis untuk memantau semua jenis usaha Anda
+	<br>Mudah, Handal, Cepat dan Menguntungkan</p>"
+section3home_text_btn = "Daftar sekarang"
+section3home_image = "/phone_home3.png"
+section4home_title = "TAMPILAN APLIKASI"
+section4home_description = "<p>Aplikasi Posbill dengan berbagai keunggulan didalamnya.</p>"
+section5home_title = "SOLUSI BISNIS"
+section5home_description = "<p style=\"text-align: center;\">Aplikasi Posbill memiliki banyak solusi bisnis diantaranya meliputi sebagai berikut.</p>"
+section6home_title = "TABEL HARGA"
+section6home_description = "<p>Aplikasi Posbill memiliki beberapa varian harga diantaranya sebagai berikut.</p>"
+section6home_2_card_title_1 = "LITE"
+section6home_2_card_price_1 = 0
+section6home_2_card_description_1 = "<p>Gratis
+	<br>selamanya</p>"
+section6home_2_card_title_2 = "PREMIUM"
+section6home_2_card_price_2 = 49
+section6home_2_card_description_2 = "<p>Perbulan atau Rp588.000/tahun,
+	<br>jika ecer bulanan Rp79.000.</p>"
+section7home_title = "Mendukung Berbagai Perangkat"
+section7home_subtitle = "POSbill"
+section7home_description = "<p>Akses POSbill melalui Smartphone, Tablet dan Website (Dashboard).</p>"
+section7home_description2 = "<p style=\"text-align: center;\">tombol unduh dibawah ini serta</p>
+
+<p style=\"text-align: center;\">rating aplikasi POSbill</p>"
+section7home_image1 = "/img-playstore.png"
+section7home_image2 = "/alat_kasir.png"
+
+[viewBag]
+section2home_2[0][icon] = "/icn-toko.png"
+section2home_2[0][title] = "POSBILL TOKO"
+section2home_2[0][description] = "<p>Satu aplikasi bisa banyak toko sekaligus. Tidak perlu repot lagi untuk terlalu sering mengunjungi cabang toko anda satu persatu.</p>"
+section2home_2[1][icon] = "/icn-kurir.png"
+section2home_2[1][title] = "POSBILL KURIR"
+section2home_2[1][description] = "<p>Memiliki fitur kurir yang akan mengantar barangmu sesuai pengiriman paling terjamin, tepat waktu dan hemat.</p>"
+section2home_2[2][icon] = "/icn-manajemen.png"
+section2home_2[2][title] = "POSBILL MANAJEMEN"
+section2home_2[2][description] = "<p>Tersedia fitur memanajemen harga modal dan harga jual. Memanajemen berbeda sesuai dengan jenis pesanan. Seperti beli ditempat, dine in dan delivery.</p>"
+section2home_2[3][icon] = "/icn-kasir.png"
+section2home_2[3][title] = "POSBILL KASIR"
+section2home_2[3][description] = "<p>Dilengkapi fitur kasir yaitu mempermudah admin untuk mengelola transaksi, laporan dan katalog.
+	<br>
+	<br>
+</p>"
+section2home_2[4][icon] = "/icn-dana.png"
+section2home_2[4][title] = "POSBILL DANA"
+section2home_2[4][description] = "<p>POSbill menyediakan beberapa metode pembayaran untuk transaksi. Seperti OVO, DANA, LINKAJA, GOPAY, ShopeePay, Support juga QRIS</p>"
+section4home_2[0][image] = "/imgss-1.png"
+section4home_2[1][image] = "/imgss-2.png"
+section4home_2[2][image] = "/imgss-3.png"
+section4home_2[3][image] = "/imgss-4.png"
+section4home_2[4][image] = "/imgss-1.png"
+section5home_2[0][icon] = "/icn-retail.png"
+section5home_2[0][title] = "RETAIL"
+section5home_2[0][description] = "<p>Aplikasi Posbill memiliki banyak solusi bisnis diantaranya retail untuk mempermudah dalam pembayaran, pemantauan laporan penjualan, mengelola stok bisnis dan lain-lain.</p>"
+section5home_2[1][icon] = "/icn-jasa.png"
+section5home_2[1][title] = "JASA"
+section5home_2[1][description] = "<p>Aplikasi Posbill juga memiliki jas pengiriman yang lebih instan, hemat biaya dan efisien dalam bisnis.</p>"
+section5home_2[2][icon] = "/icn-food.png"
+section5home_2[2][title] = "FOOD & BEVERAGE"
+section5home_2[2][description] = "<p>Aplikasi Posbill mempermudah operasional bisnis Food and Beverage, baik restoran, cloud kitchen, dan warung makan</p>"
+==
+{% set BASEURL = 'http://127.0.0.1:8000' %}
+<header class="mx-auto max-w-[1800px] z-20 bg-no-repeat bg-right-top h-[1056px]"
+    style="background-image: url('{{ 'assets/images/bg-slay.svg'|theme }}')">
+    <nav class="container flex items-center justify-between pt-10">
+        <a href="{{ 'beranda'|page }}" class="logo-navbar">
+            <img src="{{ 'assets/images/logo1.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
+        </a>
+        <ul
+            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
+            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
+                <span class="iconify" data-icon="ep:close-bold"></span>
+            </li>
+            <li class="nav-item active">
+                <a href="{{ 'beranda'|page }}" class="z-[20]">BERANDA</a>
+            </li>
+            <li class="nav-item"><a href="{{ 'fitur'|page }}">FITUR</a></li>
+            <li class="nav-item"><a href="{{ 'harga'|page }}">HARGA</a></li>
+            <li class="nav-item dropdown">
+                <div class="flex items-center gap-2 dropdown-btn">
+                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
+                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
+                </div>
+
+                <ul class="dropdown-item">
+                    <li><a href="{{ 'retail'|page }}">Retail</a></li>
+                    <li><a href="{{ 'jasa'|page }}">Jasa</a></li>
+                    <li><a href="{{ 'food'|page }}">Food & Beverage</a></li>
+                </ul>
+            </li>
+            </li>
+            <li class="nav-item font-medium"><a href="{{ 'artikel'|page }}">ARTIKEL</a></li>
+            <li class=" nav-item"><a href="{{ 'kontak-kami'|page }}">KONTAK KAMI</a></li>
+            <li class="lgTablet:mt-0 mt-5">
+                <a href="https://app.posbill.id/login" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
+                    Login Dashboard</a>
+            </li>
+        </ul>
+        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
+            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
+        </div>
+    </nav>
+
+    <section class="container lg:mt-[150px] mt-[100px] grid lg:grid-cols-2 grid-cols-1">
+        <div class="flex flex-col items-center lg:items-start">
+            <h1
+                class="font-semibold text-white  mdTablet:text-black text-center lg:text-left md:text-[60px] sm:w-[565px] text-[40px] leading-tight">
+                {{ this.page.section1home_title }}
+            </h1>
+            <div class="smPhone:w-[346px] mt-4 text-white tablet:text-black text-center lg:text-left">
+                {{ this.page.section1home_description|raw }}
+            </div>
+            <a class="btn-gradient1 mt-4" href="{{ this.page.section1home_link_donwload }}">{{ this.page.section1home_text_btn }}</a>
+        </div>
+        <div class="flex items-center justify-center lg:justify-start mt-10 lg:mt-0">
+            <img src="{{ BASEURL }}{{ this.page.section1home_image|media }}" alt="Gambar Handphone Aplikasi Posbill"
+                class="lg:w-full md:w-[70%]">
+        </div>
+    </section>
+</header>
+
+<main>
+    <section class="lg:mt-0 sm:mt-52">
+        <div class="container grid lg:grid-cols-2 grid-cols-1">
+            <div class="flex items-center justify-center">
+                <img src="{{ BASEURL }}{{ this.page.section2home_image|media }}" alt="Gambar Fitur Aplikasi Postbill"
+                    class="lg:w-[357px] w-[80%]">
+            </div>
+            <div class="md:-translate-x-4">
+                <h2 class="mdPhone:text-[40px] text-[35px] font-medium mb-[47px] mt-10">{{ this.page.section2home_title
+                    }}</h2>
+
+                {% for fitur in viewBag.section2home_2 %}
+                <div class="fitur-posbill">
+                    <img src="{{ BASEURL }}{{ fitur.icon|media }}" alt="Icon {{ fitur.title }}">
+                    <div>
+                        <h3>{{ fitur.title }}</h3>
+                        <div>
+                            {{ fitur.description|raw }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <a class="flex items-center justify-end gap-2 text-primary" href="{{ 'fitur'|page }}">
+                    Selengkapnya
+                    <span class="iconify" data-icon="charm:arrow-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="lg:mt-[180px] mt-20">
+        <div class="container flex lg:flex-row flex-col  items-center justify-center xl:translate-x-[4.5rem] gap-16">
+            <div class="flex lg:flex-row flex-col items-center gap-5 ">
+                <div class="flex lg:items-end items-center flex-col ">
+                    <h3 class="font-semibold mb-[15px]">{{ this.page.section3home_title }}</h3>
+                    <div class="lg:text-right text-center sm:w-[283px]">
+                        {{ this.page.section3home_description|raw }}
+                    </div>
+
+                    <a href="http://wa.me/6285157220258"
+                        class="block rounded-full border border-primary py-3 px-8 mt-[16px] transition hover:bg-primary hover:text-white ">
+                        {{ this.page.section3home_text_btn }}
+                    </a>
+                </div>
+
+                <img src="{{ 'assets/images/icon/icn-r.svg'|theme }}" alt="Icon Right" class="lg:rotate-0 rotate-90">
+            </div>
+            <div
+                class="relative before:absolute lg:before:h-[541px] before:h-[2px] lg:before:w-[2px] before:w-[300px]  before:bg-primary lg:before:-bottom-[16rem] before:bottom-[2rem] lg:before:left-[1.7rem] before:-left-[200%] before:z-[-1]">
+                <img src="{{'assets/images/logo4.png'|theme}}" alt="Logo Posbill" class="w-[59px]">
+            </div>
+            <div class="flex items-center justify-center">
+                <img src="{{ BASEURL }}{{ this.page.section3home_image|media }}" alt="Gambar Aplikasi "
+                    class="lg:w-[441px]">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="lg:mt-[200px]">
+        <div class="container flex items-center justify-center flex-col">
+            <div class="text-center">
+                <h2 class="mdPhone:text-[40px] text-[35px] font-medium mb-[26px] mt-10">{{ this.page.section4home_title
+                    }}</h2>
+                <div class="text-[#222222]">{{ this.page.section4home_description|raw }}</div>
+            </div>
+            <div class="owl-carousel mt-[50px] relative xl:w-full lg:w-[50rem]">
+
+                {% for card in viewBag.section4home_2 %}
+                <img src="{{ BASEURL }}{{ card.image|media }}" alt="{{ card.image }}">
+                {% endfor %}
+            </div>
+    </section>
+
+    <section class="mt-[100px]">
+        <div class="container">
+            <div class="flex items-center flex-col text-center">
+                <h2 class="mdPhone:text-[40px] text-[35px] font-medium mb-[26px] mt-10">{{ this.page.section5home_title
+                    }}</h2>
+                <div class="text-[#222222] md:w-[364px]">
+                    {{ this.page.section5home_description|raw }}
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 place-items-centers md:grid-cols-2 grid-cols-1 mt-[53px] lg:gap-0 gap-20">
+
+                {% for solusi in viewBag.section5home_2 %}
+                <div class="flex flex-col items-center text-center gap-4">
+                    <img src="{{ BASEURL }}{{ solusi.icon|media }}" alt="Icon {{ solusi.title }}" class="w-[100px]">
+                    <h2>{{ solusi.title }}</h2>
+                    <div class="md:w-[290px]">
+                        {{ solusi.description|raw }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[100px]">
+        <div class="container">
+            <div class="flex items-center flex-col text-center">
+                <h2 class="mdPhone:text-[40px] text-[35px] font-medium mb-[26px] mt-10">{{ this.page.section6home_title
+                    }}</h2>
+                <div class="text-[#222222] md:w-[364px]">
+                    {{ this.page.section6home_description|raw }}
+                </div>
+            </div>
+
+            <div class="flex md:flex-row flex-col md:items-end justify-center gap-10 mt-[50px]">
+                <div
+                    class="md:w-[428px] h-[665.47px] bg-white shadow-xl rounded-md flex flex-col items-center justify-center gap-12">
+                    <h2 class="text-[32px]">{{ this.page.section6home_2_card_title_1 }}</h2>
+                    <div class="relative flex items-center text-primary ">
+                        <span class="text-[18px] absolute top-[10px] font-medium">Rp</span>
+                        <h3 class="text-[110px]">{{ this.page.section6home_2_card_price_1 }}</h3>
+                        <!-- <span class="text-[24px] pt-12">.000</span> -->
+                    </div>
+                    <div class="text-center">
+                        {{ this.page.section6home_2_card_description_1|raw }}
+                    </div>
+                    <a href="http://wa.me/6285157220258" class="py-4 px-24 flex items-center justify-center bg-secondary rounded-full">Beli</a>
+                </div>
+                <div
+                    class="md:w-[428px] h-[665.47px] bg-white shadow-xl rounded-md flex flex-col items-center justify-center gap-12">
+                    <h2 class="text-[32px]">{{ this.page.section6home_2_card_title_2 }}</h2>
+                    <div class="relative flex items-center text-primary ">
+                        <span class="text-[18px] absolute top-[10px] font-medium">Rp</span>
+                        <h3 class="text-[110px]">{{ this.page.section6home_2_card_price_2 }}</h3>
+                        <span class="text-[24px] pt-12">.000</span>
+                    </div>
+                    <div class="text-center">
+                        {{ this.page.section6home_2_card_description_2|raw }}
+                    </div>
+                    <a href="http://wa.me/6285157220258" class="py-4 px-24 flex items-center justify-center bg-secondary rounded-full">Beli</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[100px]">
+        <div class="container">
+            <div class="flex items-center flex-col text-center ">
+                <h2 class="text-[16px]">{{ this.page.section7home_subtitle }}</h2>
+                <h2 class="text-[32px]  font-medium mb-[20px] ">{{ this.page.section7home_title }}</h2>
+                <div class="text-[#222222] mb-[14px]">
+                    {{ this.page.section7home_description|raw }}
+                </div>
+                <div class="text-[#222222] md:w-[232px]">
+                    {{ this.page.section7home_description2|raw }}
+                </div>
+
+                <a href="https://play.google.com/store/apps/details?id=app.posbill.id&hl=en&gl=US&pli=1">
+                    <img src="{{ BASEURL }}{{ this.page.section7home_image1|media }}" alt="" class="w-[152px] my-[42px]">
+                </a>
+                <img src="{{ BASEURL }}{{ this.page.section7home_image2|media }}" alt="" class="md:w-[975px]">
+            </div>
+        </div>
+    </section>
+</main>
+
+{% partial 'floatwa' %}
+{% partial 'footer' %}";s:5:"mtime";i:1672115084;s:6:"markup";s:11946:"{% set BASEURL = 'http://127.0.0.1:8000' %}
+<header class="mx-auto max-w-[1800px] z-20 bg-no-repeat bg-right-top h-[1056px]"
+    style="background-image: url('{{ 'assets/images/bg-slay.svg'|theme }}')">
+    <nav class="container flex items-center justify-between pt-10">
+        <a href="{{ 'beranda'|page }}" class="logo-navbar">
+            <img src="{{ 'assets/images/logo1.png'|theme }}" alt="Logo Posbill" class="w-[250px]">
+        </a>
+        <ul
+            class="navbar flex lgTablet:flex-row flex-col lgTablet:w-max w-[16rem] lgTablet:h-max h-full lgTablet:left-auto lgTablet:top-auto top-0 lgTablet:items-center gap-2 text-[16px] font-medium lgTablet:relative fixed lgTablet:bg-transparent bg-white lgTablet:p-0 px-6 pb-16 pt-6">
+            <li class="lgTablet:hidden cursor-pointer btn-close-nav text-3xl text-primary translate-x-[11rem] my-6">
+                <span class="iconify" data-icon="ep:close-bold"></span>
+            </li>
+            <li class="nav-item active">
+                <a href="{{ 'beranda'|page }}" class="z-[20]">BERANDA</a>
+            </li>
+            <li class="nav-item"><a href="{{ 'fitur'|page }}">FITUR</a></li>
+            <li class="nav-item"><a href="{{ 'harga'|page }}">HARGA</a></li>
+            <li class="nav-item dropdown">
+                <div class="flex items-center gap-2 dropdown-btn">
+                    <a href="javascript:void(0)">SOLUSI BISNIS</a>
+                    <span class="iconify" data-icon="ep:arrow-down-bold"></span>
+                </div>
+
+                <ul class="dropdown-item">
+                    <li><a href="{{ 'retail'|page }}">Retail</a></li>
+                    <li><a href="{{ 'jasa'|page }}">Jasa</a></li>
+                    <li><a href="{{ 'food'|page }}">Food & Beverage</a></li>
+                </ul>
+            </li>
+            </li>
+            <li class="nav-item font-medium"><a href="{{ 'artikel'|page }}">ARTIKEL</a></li>
+            <li class=" nav-item"><a href="{{ 'kontak-kami'|page }}">KONTAK KAMI</a></li>
+            <li class="lgTablet:mt-0 mt-5">
+                <a href="https://app.posbill.id/login" class="rounded-full bg-secondary px-5 py-4 ml-2 text-primary">
+                    Login Dashboard</a>
+            </li>
+        </ul>
+        <div class="lgTablet:hidden cursor-pointer btn-open-nav">
+            <span class="iconify text-4xl text-white" data-icon="fluent:list-16-filled"></span>
+        </div>
+    </nav>
+
+    <section class="container lg:mt-[150px] mt-[100px] grid lg:grid-cols-2 grid-cols-1">
+        <div class="flex flex-col items-center lg:items-start">
+            <h1
+                class="font-semibold text-white  mdTablet:text-black text-center lg:text-left md:text-[60px] sm:w-[565px] text-[40px] leading-tight">
+                {{ this.page.section1home_title }}
+            </h1>
+            <div class="smPhone:w-[346px] mt-4 text-white tablet:text-black text-center lg:text-left">
+                {{ this.page.section1home_description|raw }}
+            </div>
+            <a class="btn-gradient1 mt-4" href="{{ this.page.section1home_link_donwload }}">{{ this.page.section1home_text_btn }}</a>
+        </div>
+        <div class="flex items-center justify-center lg:justify-start mt-10 lg:mt-0">
+            <img src="{{ BASEURL }}{{ this.page.section1home_image|media }}" alt="Gambar Handphone Aplikasi Posbill"
+                class="lg:w-full md:w-[70%]">
+        </div>
+    </section>
+</header>
+
+<main>
+    <section class="lg:mt-0 sm:mt-52">
+        <div class="container grid lg:grid-cols-2 grid-cols-1">
+            <div class="flex items-center justify-center">
+                <img src="{{ BASEURL }}{{ this.page.section2home_image|media }}" alt="Gambar Fitur Aplikasi Postbill"
+                    class="lg:w-[357px] w-[80%]">
+            </div>
+            <div class="md:-translate-x-4">
+                <h2 class="mdPhone:text-[40px] text-[35px] font-medium mb-[47px] mt-10">{{ this.page.section2home_title
+                    }}</h2>
+
+                {% for fitur in viewBag.section2home_2 %}
+                <div class="fitur-posbill">
+                    <img src="{{ BASEURL }}{{ fitur.icon|media }}" alt="Icon {{ fitur.title }}">
+                    <div>
+                        <h3>{{ fitur.title }}</h3>
+                        <div>
+                            {{ fitur.description|raw }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <a class="flex items-center justify-end gap-2 text-primary" href="{{ 'fitur'|page }}">
+                    Selengkapnya
+                    <span class="iconify" data-icon="charm:arrow-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="lg:mt-[180px] mt-20">
+        <div class="container flex lg:flex-row flex-col  items-center justify-center xl:translate-x-[4.5rem] gap-16">
+            <div class="flex lg:flex-row flex-col items-center gap-5 ">
+                <div class="flex lg:items-end items-center flex-col ">
+                    <h3 class="font-semibold mb-[15px]">{{ this.page.section3home_title }}</h3>
+                    <div class="lg:text-right text-center sm:w-[283px]">
+                        {{ this.page.section3home_description|raw }}
+                    </div>
+
+                    <a href="http://wa.me/6285157220258"
+                        class="block rounded-full border border-primary py-3 px-8 mt-[16px] transition hover:bg-primary hover:text-white ">
+                        {{ this.page.section3home_text_btn }}
+                    </a>
+                </div>
+
+                <img src="{{ 'assets/images/icon/icn-r.svg'|theme }}" alt="Icon Right" class="lg:rotate-0 rotate-90">
+            </div>
+            <div
+                class="relative before:absolute lg:before:h-[541px] before:h-[2px] lg:before:w-[2px] before:w-[300px]  before:bg-primary lg:before:-bottom-[16rem] before:bottom-[2rem] lg:before:left-[1.7rem] before:-left-[200%] before:z-[-1]">
+                <img src="{{'assets/images/logo4.png'|theme}}" alt="Logo Posbill" class="w-[59px]">
+            </div>
+            <div class="flex items-center justify-center">
+                <img src="{{ BASEURL }}{{ this.page.section3home_image|media }}" alt="Gambar Aplikasi "
+                    class="lg:w-[441px]">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="lg:mt-[200px]">
+        <div class="container flex items-center justify-center flex-col">
+            <div class="text-center">
+                <h2 class="mdPhone:text-[40px] text-[35px] font-medium mb-[26px] mt-10">{{ this.page.section4home_title
+                    }}</h2>
+                <div class="text-[#222222]">{{ this.page.section4home_description|raw }}</div>
+            </div>
+            <div class="owl-carousel mt-[50px] relative xl:w-full lg:w-[50rem]">
+
+                {% for card in viewBag.section4home_2 %}
+                <img src="{{ BASEURL }}{{ card.image|media }}" alt="{{ card.image }}">
+                {% endfor %}
+            </div>
+    </section>
+
+    <section class="mt-[100px]">
+        <div class="container">
+            <div class="flex items-center flex-col text-center">
+                <h2 class="mdPhone:text-[40px] text-[35px] font-medium mb-[26px] mt-10">{{ this.page.section5home_title
+                    }}</h2>
+                <div class="text-[#222222] md:w-[364px]">
+                    {{ this.page.section5home_description|raw }}
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 place-items-centers md:grid-cols-2 grid-cols-1 mt-[53px] lg:gap-0 gap-20">
+
+                {% for solusi in viewBag.section5home_2 %}
+                <div class="flex flex-col items-center text-center gap-4">
+                    <img src="{{ BASEURL }}{{ solusi.icon|media }}" alt="Icon {{ solusi.title }}" class="w-[100px]">
+                    <h2>{{ solusi.title }}</h2>
+                    <div class="md:w-[290px]">
+                        {{ solusi.description|raw }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[100px]">
+        <div class="container">
+            <div class="flex items-center flex-col text-center">
+                <h2 class="mdPhone:text-[40px] text-[35px] font-medium mb-[26px] mt-10">{{ this.page.section6home_title
+                    }}</h2>
+                <div class="text-[#222222] md:w-[364px]">
+                    {{ this.page.section6home_description|raw }}
+                </div>
+            </div>
+
+            <div class="flex md:flex-row flex-col md:items-end justify-center gap-10 mt-[50px]">
+                <div
+                    class="md:w-[428px] h-[665.47px] bg-white shadow-xl rounded-md flex flex-col items-center justify-center gap-12">
+                    <h2 class="text-[32px]">{{ this.page.section6home_2_card_title_1 }}</h2>
+                    <div class="relative flex items-center text-primary ">
+                        <span class="text-[18px] absolute top-[10px] font-medium">Rp</span>
+                        <h3 class="text-[110px]">{{ this.page.section6home_2_card_price_1 }}</h3>
+                        <!-- <span class="text-[24px] pt-12">.000</span> -->
+                    </div>
+                    <div class="text-center">
+                        {{ this.page.section6home_2_card_description_1|raw }}
+                    </div>
+                    <a href="http://wa.me/6285157220258" class="py-4 px-24 flex items-center justify-center bg-secondary rounded-full">Beli</a>
+                </div>
+                <div
+                    class="md:w-[428px] h-[665.47px] bg-white shadow-xl rounded-md flex flex-col items-center justify-center gap-12">
+                    <h2 class="text-[32px]">{{ this.page.section6home_2_card_title_2 }}</h2>
+                    <div class="relative flex items-center text-primary ">
+                        <span class="text-[18px] absolute top-[10px] font-medium">Rp</span>
+                        <h3 class="text-[110px]">{{ this.page.section6home_2_card_price_2 }}</h3>
+                        <span class="text-[24px] pt-12">.000</span>
+                    </div>
+                    <div class="text-center">
+                        {{ this.page.section6home_2_card_description_2|raw }}
+                    </div>
+                    <a href="http://wa.me/6285157220258" class="py-4 px-24 flex items-center justify-center bg-secondary rounded-full">Beli</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[100px]">
+        <div class="container">
+            <div class="flex items-center flex-col text-center ">
+                <h2 class="text-[16px]">{{ this.page.section7home_subtitle }}</h2>
+                <h2 class="text-[32px]  font-medium mb-[20px] ">{{ this.page.section7home_title }}</h2>
+                <div class="text-[#222222] mb-[14px]">
+                    {{ this.page.section7home_description|raw }}
+                </div>
+                <div class="text-[#222222] md:w-[232px]">
+                    {{ this.page.section7home_description2|raw }}
+                </div>
+
+                <a href="https://play.google.com/store/apps/details?id=app.posbill.id&hl=en&gl=US&pli=1">
+                    <img src="{{ BASEURL }}{{ this.page.section7home_image1|media }}" alt="" class="w-[152px] my-[42px]">
+                </a>
+                <img src="{{ BASEURL }}{{ this.page.section7home_image2|media }}" alt="" class="md:w-[975px]">
+            </div>
+        </div>
+    </section>
+</main>
+
+{% partial 'floatwa' %}
+{% partial 'footer' %}";s:4:"code";N;s:5:"title";s:7:"Beranda";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:18:"section1home_title";s:31:"Aplikasi POS Kasir UMKM Terbaik";s:24:"section1home_description";s:169:"<p>Catat penjualan, stok barang, dan laporan&nbsp;</p>
+
+<p>dengan mudah dan praktis.&nbsp;</p>
+
+<p>
+	<br>
+</p>
+
+<p>
+	<br>
+</p>
+
+<p>Gratis 1 bulan pertama</p>";s:21:"section1home_text_btn";s:17:"Download sekarang";s:18:"section1home_image";s:16:"/phone_home1.png";s:26:"section1home_link_donwload";s:78:"https://play.google.com/store/apps/details?id=app.posbill.id&hl=en&gl=US&pli=1";s:18:"section2home_title";s:13:"FITUR POSBILL";s:18:"section2home_image";s:16:"/phone_home2.png";s:18:"section3home_title";s:18:"Aplikasi Dashboard";s:24:"section3home_description";s:137:"<p style="text-align: right;">Satu aplikasi bisnis untuk memantau semua jenis usaha Anda
+	<br>Mudah, Handal, Cepat dan Menguntungkan</p>";s:21:"section3home_text_btn";s:15:"Daftar sekarang";s:18:"section3home_image";s:16:"/phone_home3.png";s:18:"section4home_title";s:17:"TAMPILAN APLIKASI";s:24:"section4home_description";s:62:"<p>Aplikasi Posbill dengan berbagai keunggulan didalamnya.</p>";s:18:"section5home_title";s:13:"SOLUSI BISNIS";s:24:"section5home_description";s:119:"<p style="text-align: center;">Aplikasi Posbill memiliki banyak solusi bisnis diantaranya meliputi sebagai berikut.</p>";s:18:"section6home_title";s:11:"TABEL HARGA";s:24:"section6home_description";s:83:"<p>Aplikasi Posbill memiliki beberapa varian harga diantaranya sebagai berikut.</p>";s:27:"section6home_2_card_title_1";s:4:"LITE";s:27:"section6home_2_card_price_1";s:1:"0";s:33:"section6home_2_card_description_1";s:29:"<p>Gratis
+	<br>selamanya</p>";s:27:"section6home_2_card_title_2";s:7:"PREMIUM";s:27:"section6home_2_card_price_2";s:2:"49";s:33:"section6home_2_card_description_2";s:71:"<p>Perbulan atau Rp588.000/tahun,
+	<br>jika ecer bulanan Rp79.000.</p>";s:18:"section7home_title";s:28:"Mendukung Berbagai Perangkat";s:21:"section7home_subtitle";s:7:"POSbill";s:24:"section7home_description";s:72:"<p>Akses POSbill melalui Smartphone, Tablet dan Website (Dashboard).</p>";s:25:"section7home_description2";s:127:"<p style="text-align: center;">tombol unduh dibawah ini serta</p>
+
+<p style="text-align: center;">rating aplikasi POSbill</p>";s:19:"section7home_image1";s:18:"/img-playstore.png";s:19:"section7home_image2";s:15:"/alat_kasir.png";s:7:"viewBag";a:3:{s:14:"section2home_2";a:5:{i:0;a:3:{s:4:"icon";s:13:"/icn-toko.png";s:5:"title";s:12:"POSBILL TOKO";s:11:"description";s:135:"<p>Satu aplikasi bisa banyak toko sekaligus. Tidak perlu repot lagi untuk terlalu sering mengunjungi cabang toko anda satu persatu.</p>";}i:1;a:3:{s:4:"icon";s:14:"/icn-kurir.png";s:5:"title";s:13:"POSBILL KURIR";s:11:"description";s:114:"<p>Memiliki fitur kurir yang akan mengantar barangmu sesuai pengiriman paling terjamin, tepat waktu dan hemat.</p>";}i:2;a:3:{s:4:"icon";s:18:"/icn-manajemen.png";s:5:"title";s:17:"POSBILL MANAJEMEN";s:11:"description";s:155:"<p>Tersedia fitur memanajemen harga modal dan harga jual. Memanajemen berbeda sesuai dengan jenis pesanan. Seperti beli ditempat, dine in dan delivery.</p>";}i:3;a:3:{s:4:"icon";s:14:"/icn-kasir.png";s:5:"title";s:13:"POSBILL KASIR";s:11:"description";s:117:"<p>Dilengkapi fitur kasir yaitu mempermudah admin untuk mengelola transaksi, laporan dan katalog.
+	<br>
+	<br>
+</p>";}i:4;a:3:{s:4:"icon";s:13:"/icn-dana.png";s:5:"title";s:12:"POSBILL DANA";s:11:"description";s:134:"<p>POSbill menyediakan beberapa metode pembayaran untuk transaksi. Seperti OVO, DANA, LINKAJA, GOPAY, ShopeePay, Support juga QRIS</p>";}}s:14:"section4home_2";a:5:{i:0;a:1:{s:5:"image";s:12:"/imgss-1.png";}i:1;a:1:{s:5:"image";s:12:"/imgss-2.png";}i:2;a:1:{s:5:"image";s:12:"/imgss-3.png";}i:3;a:1:{s:5:"image";s:12:"/imgss-4.png";}i:4;a:1:{s:5:"image";s:12:"/imgss-1.png";}}s:14:"section5home_2";a:3:{i:0;a:3:{s:4:"icon";s:15:"/icn-retail.png";s:5:"title";s:6:"RETAIL";s:11:"description";s:175:"<p>Aplikasi Posbill memiliki banyak solusi bisnis diantaranya retail untuk mempermudah dalam pembayaran, pemantauan laporan penjualan, mengelola stok bisnis dan lain-lain.</p>";}i:1;a:3:{s:4:"icon";s:13:"/icn-jasa.png";s:5:"title";s:4:"JASA";s:11:"description";s:109:"<p>Aplikasi Posbill juga memiliki jas pengiriman yang lebih instan, hemat biaya dan efisien dalam bisnis.</p>";}i:2;a:3:{s:4:"icon";s:13:"/icn-food.png";s:5:"title";s:15:"FOOD & BEVERAGE";s:11:"description";s:120:"<p>Aplikasi Posbill mempermudah operasional bisnis Food and Beverage, baik restoran, cloud kitchen, dan warung makan</p>";}}}}}

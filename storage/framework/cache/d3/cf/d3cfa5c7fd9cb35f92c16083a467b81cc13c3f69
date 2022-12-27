@@ -1,0 +1,154 @@
+1672143960a:1:{s:9:"kasir.htm";a:14:{s:8:"fileName";s:9:"kasir.htm";s:7:"content";s:3927:"title = "Kasir"
+url = "/kasir"
+layout = "default"
+is_hidden = 0
+section1kasir_title = "Kasir"
+section1kasir_description = "<p>Aplikasi Kasir Serba Cepat, Serba Ringkas, Serba Tepat! &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp;</p>"
+section1kasir_text_btn = "Daftar Sekarang"
+section1kasir_image = "/ils-1k.png"
+
+[viewBag]
+section2kasir[0][title] = "Kelola bisnis dengan mudah"
+section2kasir[0][description] = "<p>Kelola pencatatan transaksi bisnis anda dengan mudah hanya dengan fitur POS aplikasi
+    Posbill. Atur tipe pesanan, harga, diskon, order dan booking dalam satu fitur. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>"
+section2kasir[0][image] = "/ils-2k.png"
+section2kasir[0][right] = 0
+section2kasir[1][title] = "Loyalty hingga Fitur Promosi"
+section2kasir[1][description] = "<p style=\"text-align: right;\">Data setiap pelanggan setia Anda di sistem, berikan
+    manfaat dari promosi atau penerapan harga spesial untuk kategori pelanggan tertentu hingga akumulasi poin yang dapat
+    ditukarkan.</p>"
+section2kasir[1][image] = "/ils-3k.png"
+section2kasir[1][right] = 1
+section2kasir[2][title] = "Mendukung Toko Online"
+section2kasir[2][description] = "<p>Kembangkan bisnis dan jadi semakin profesional dengan website toko online whitelabel
+    yang terhubung dengan aplikasi kasir. Permudah pelanggan setia untuk melakukan pemesanan dengan pilihan pengiriman
+    yang terintegrasi. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <br>
+    <br>
+</p>"
+section2kasir[2][image] = "/ils-4t.png"
+section2kasir[2][right] = 0
+==
+{% set BASEURL = 'http://localhost/posbill_cms/' %}
+
+{% partial 'nav2' %}
+
+
+<main>
+    <section class="bg-[#A71A65] lg:h-[644px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]">
+        <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10 ">
+            <div class="flex lg:justify-end">
+                <img src="{{ BASEURL }}{{ this.page.section1kasir_image|media }}" alt="" class="lg:w-[483.36px]">
+            </div>
+            <div class="lg:pt-20">
+                <h2 class="font-semibold text-[36px] mb-[24px]">{{ this.page.section1kasir_title }}
+                </h2>
+                <div class="mb-[31px] lg:w-[462px] text-[24px] font-light">
+                    {{ this.page.section1kasir_description|raw }}
+                </div>
+                <a href="" class="btn-gradient2 text-[#222222]">{{ this.page.section1kasir_text_btn }}</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[90px]">
+        <div class="container">
+
+            {% for card in viewBag.section2kasir %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                {% if card.right == true %}
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="lg:text-right font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="lg:text-right text-[16px] paragraf">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                {% else %}
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[16px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+{% partial 'floatwa' %}
+{% partial 'footer' %}";s:5:"mtime";i:1672115195;s:6:"markup";s:2289:"{% set BASEURL = 'http://localhost/posbill_cms/' %}
+
+{% partial 'nav2' %}
+
+
+<main>
+    <section class="bg-[#A71A65] lg:h-[644px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]">
+        <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10 ">
+            <div class="flex lg:justify-end">
+                <img src="{{ BASEURL }}{{ this.page.section1kasir_image|media }}" alt="" class="lg:w-[483.36px]">
+            </div>
+            <div class="lg:pt-20">
+                <h2 class="font-semibold text-[36px] mb-[24px]">{{ this.page.section1kasir_title }}
+                </h2>
+                <div class="mb-[31px] lg:w-[462px] text-[24px] font-light">
+                    {{ this.page.section1kasir_description|raw }}
+                </div>
+                <a href="" class="btn-gradient2 text-[#222222]">{{ this.page.section1kasir_text_btn }}</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[90px]">
+        <div class="container">
+
+            {% for card in viewBag.section2kasir %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                {% if card.right == true %}
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="lg:text-right font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="lg:text-right text-[16px] paragraf">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                {% else %}
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[16px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+{% partial 'floatwa' %}
+{% partial 'footer' %}";s:4:"code";N;s:5:"title";s:5:"Kasir";s:3:"url";s:6:"/kasir";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:19:"section1kasir_title";s:5:"Kasir";s:25:"section1kasir_description";s:123:"<p>Aplikasi Kasir Serba Cepat, Serba Ringkas, Serba Tepat! &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp;</p>";s:22:"section1kasir_text_btn";s:15:"Daftar Sekarang";s:19:"section1kasir_image";s:11:"/ils-1k.png";s:7:"viewBag";a:1:{s:13:"section2kasir";a:3:{i:0;a:4:{s:5:"title";s:26:"Kelola bisnis dengan mudah";s:11:"description";s:250:"<p>Kelola pencatatan transaksi bisnis anda dengan mudah hanya dengan fitur POS aplikasi
+    Posbill. Atur tipe pesanan, harga, diskon, order dan booking dalam satu fitur. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>";s:5:"image";s:11:"/ils-2k.png";s:5:"right";s:1:"0";}i:1;a:4:{s:5:"title";s:28:"Loyalty hingga Fitur Promosi";s:11:"description";s:224:"<p style="text-align: right;">Data setiap pelanggan setia Anda di sistem, berikan
+    manfaat dari promosi atau penerapan harga spesial untuk kategori pelanggan tertentu hingga akumulasi poin yang dapat
+    ditukarkan.</p>";s:5:"image";s:11:"/ils-3k.png";s:5:"right";s:1:"1";}i:2;a:4:{s:5:"title";s:21:"Mendukung Toko Online";s:11:"description";s:327:"<p>Kembangkan bisnis dan jadi semakin profesional dengan website toko online whitelabel
+    yang terhubung dengan aplikasi kasir. Permudah pelanggan setia untuk melakukan pemesanan dengan pilihan pengiriman
+    yang terintegrasi. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <br>
+    <br>
+</p>";s:5:"image";s:11:"/ils-4t.png";s:5:"right";s:1:"0";}}}}}

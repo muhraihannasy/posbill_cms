@@ -1,0 +1,402 @@
+1672144073a:1:{s:8:"food.htm";a:5:{s:8:"fileName";s:8:"food.htm";s:7:"content";s:7273:"title = "Food" url = "/food" layout = "default" is_hidden = 0 section1food_title
+= "Berpacu dengan waktu. Berkembang bersama POSbill." section1food_subtitle =
+"Food & Beverage" section1food_description = "
+<p>
+  Terima pesanan lebih cepat. Serahkan urusan operasional dan administrasi
+  kepada kami. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+" section1food_text_btn = "Daftar Sekarang" section1food_background = "/bgf.png"
+section2food_title = "Restoran yang menggunakan POSbill berhasil mengelola lebih
+dari 7 outlet untuk melayani jutaanpelanggan setianya." section2food_image =
+"/img-1f.png" section3food_title = "Kami bangga menyambut anda sebagai merchant
+restoran yang bermitra dengan POSbill" [viewBag] section3food_2[0][title] =
+"Buat penawaran menarik" section3food_2[0][description] = "
+<p>
+  Promo sarapan? Paket makan siang? Atau potongan harga makan malam? Buat
+  promosi atau program loyalitas yang pelanggan butuhkan. Atur jenis promo dan
+  periode berlakunya dari Backoffice.
+</p>
+" section3food_2[0][image] = "/img-2f.png" section3food_2[0][right] = 1
+section3food_2[1][title] = "Transaksi cepat tanpa ribet"
+section3food_2[1][description] = "
+<p>
+  Siapa yang suka menunggu? Masukkan pesanan hanya dalam hitungan detik dengan
+  tampilan intuitif Moka dan buat pelanggan Anda tersenyum. &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+" section3food_2[1][image] = "/img-3f.png" section3food_2[1][right] = 0
+section3food_2[2][title] = "Satu solusi untuk multi cabang"
+section3food_2[2][description] = "
+<p>
+  Harus mengumpulkan rekap penjualan multi cabang? Jangan khawatir. Rekap
+  penjualan, inventori, transaksi, semua aman dengan POSbill.
+</p>
+" section3food_2[2][image] = "/img-4f.png" section3food_2[2][right] = 1
+[blogPosts] pageNumber = "{{ :page }}" postsPerPage = 10 noPostsMessage = "No
+posts found" sortOrder = "published_at desc" categoryPage = "blog/category"
+postPage = "blog/post" == {% set BASEURL = 'http://127.0.0.1:8000' %} {% partial
+'nav2' %}
+
+<main>
+  <section
+    class="bg-no-repeat bg-center bg-cover h-[644px] flex items-center text-white"
+    style="background-image: url({{ BASEURL }}{{ this.page.section1food_background|media }});"
+  >
+    <div class="container">
+      <h2 class="font-semibold text-[24px] mb-[29px]">
+        {{ this.page.section1food_subtitle }}
+      </h2>
+      <h2
+        class="font-semibold md:text-[48px] sm:w-[565px] text-[40px] leading-tight mb-[20px]"
+      >
+        {{ this.page.section1food_title }}
+      </h2>
+      <div class="mb-[31px] w-[597px] font-semibold">
+        {{ this.page.section1food_description|raw }}
+      </div>
+      <a href="http://wa.me/6285157220258" class="btn-gradient2 text-[#222222]"
+        >{{ this.page.section1food_text_btn }}</a
+      >
+    </div>
+  </section>
+
+  <section class="bg-fivety py-24">
+    <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10">
+      <div class="flex items-center">
+        <img
+          src="{{ BASEURL }}{{ this.page.section2food_image|media }}"
+          alt=""
+          class="lg:w-[519px] rounded-md"
+        />
+      </div>
+      <div class="flex items-center">
+        <p class="font-semibold text-[24px] text-[#222222] lg:w-[436px]">
+          {{ this.page.section2food_title }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-[70px]">
+    <div class="container">
+      <h2
+        class="font-semibold text-[#222222] text-[32px] text-center mb-[100px]"
+      >
+        {{ this.page.section3food_title }}
+      </h2>
+
+      {% for card in viewBag.section3food_2 %} {% if card.right == true %}
+      <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+        <div class="flex flex-col justify-center gap-2">
+          <h2 class="lg:text-right font-semibold text-[28px]">
+            {{ card.title }}
+          </h2>
+          <div class="lg:text-right text-[20px] paragraf">
+            {{ card.description|raw }}
+          </div>
+        </div>
+        <div>
+          <img
+            src="{{ BASEURL }}{{ card.image|media }}"
+            alt=""
+            class="rounded-md"
+          />
+        </div>
+      </div>
+      {% else %}
+      <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+        <div>
+          <img
+            src="{{ BASEURL }}{{ card.image|media }}"
+            alt=""
+            class="rounded-md"
+          />
+        </div>
+        <div class="flex flex-col justify-center gap-2">
+          <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+          <div class="text-[20px]">{{ card.description|raw }}</div>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+  </section>
+
+  <section class="mt-[100px] bg-fivety py-12">
+    <div class="container">
+      <h2 class="text-[32px] font-semibold text-[#222222] mb-[38px]">
+        Artikel POSbill
+      </h2>
+
+      {% set posts = blogPosts.posts %}
+
+      <ul
+        class="post-list grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-28"
+      >
+        {% for post in posts %}
+
+        <li>
+          <a href="{{ post.url }}">
+            {% if post.featured_images.count %}
+            <div class="featured-images text-center">
+              {% for image in post.featured_images %}
+              <p>
+                <img
+                  data-src="{{ image.filename }}"
+                  src="{{ image.path }}"
+                  alt="{{ image.description }}"
+                  class="w-full"
+                />
+              </p>
+              {% endfor %}
+            </div>
+            {% endif %}
+            <h3 class="font-medium text-[16px] mt-4">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+            <p class="excerpt text-[14px] mt-5">{{ post.summary|raw }}</p>
+          </a>
+          <a
+            href="{{ post.url }}"
+            class="flex items-center gap-4 text-primary mt-2"
+          >
+            Selengkapnya
+            <span class="iconify" data-icon="charm:arrow-right"></span>
+          </a>
+        </li>
+        {% else %}
+        <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+        {% endfor %}
+      </ul>
+
+      {% if posts.lastPage > 1 %}
+      <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+        <li>
+          <a
+            href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}"
+            >&larr; Prev</a
+          >
+        </li>
+        {% endif %} {% for page in 1..posts.lastPage %}
+        <li class="{{ posts.currentPage == page ? 'active' : null }}">
+          <a
+            href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}"
+            >{{ page }}</a
+          >
+        </li>
+        {% endfor %} {% if posts.lastPage > posts.currentPage %}
+        <li>
+          <a
+            href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}"
+            >Next &rarr;</a
+          >
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+{% partial 'floatwa' %} {% partial 'footer' %}
+";s:5:"mtime";i:1672143469;s:6:"markup";s:7271:"title = "Food" url = "/food" layout = "default" is_hidden = 0 section1food_title
+= "Berpacu dengan waktu. Berkembang bersama POSbill." section1food_subtitle =
+"Food & Beverage" section1food_description = "
+<p>
+  Terima pesanan lebih cepat. Serahkan urusan operasional dan administrasi
+  kepada kami. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+" section1food_text_btn = "Daftar Sekarang" section1food_background = "/bgf.png"
+section2food_title = "Restoran yang menggunakan POSbill berhasil mengelola lebih
+dari 7 outlet untuk melayani jutaanpelanggan setianya." section2food_image =
+"/img-1f.png" section3food_title = "Kami bangga menyambut anda sebagai merchant
+restoran yang bermitra dengan POSbill" [viewBag] section3food_2[0][title] =
+"Buat penawaran menarik" section3food_2[0][description] = "
+<p>
+  Promo sarapan? Paket makan siang? Atau potongan harga makan malam? Buat
+  promosi atau program loyalitas yang pelanggan butuhkan. Atur jenis promo dan
+  periode berlakunya dari Backoffice.
+</p>
+" section3food_2[0][image] = "/img-2f.png" section3food_2[0][right] = 1
+section3food_2[1][title] = "Transaksi cepat tanpa ribet"
+section3food_2[1][description] = "
+<p>
+  Siapa yang suka menunggu? Masukkan pesanan hanya dalam hitungan detik dengan
+  tampilan intuitif Moka dan buat pelanggan Anda tersenyum. &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+" section3food_2[1][image] = "/img-3f.png" section3food_2[1][right] = 0
+section3food_2[2][title] = "Satu solusi untuk multi cabang"
+section3food_2[2][description] = "
+<p>
+  Harus mengumpulkan rekap penjualan multi cabang? Jangan khawatir. Rekap
+  penjualan, inventori, transaksi, semua aman dengan POSbill.
+</p>
+" section3food_2[2][image] = "/img-4f.png" section3food_2[2][right] = 1
+[blogPosts] pageNumber = "{{ :page }}" postsPerPage = 10 noPostsMessage = "No
+posts found" sortOrder = "published_at desc" categoryPage = "blog/category"
+postPage = "blog/post" == {% set BASEURL = 'http://127.0.0.1:8000' %} {% partial
+'nav2' %}
+
+<main>
+  <section
+    class="bg-no-repeat bg-center bg-cover h-[644px] flex items-center text-white"
+    style="background-image: url({{ BASEURL }}{{ this.page.section1food_background|media }});"
+  >
+    <div class="container">
+      <h2 class="font-semibold text-[24px] mb-[29px]">
+        {{ this.page.section1food_subtitle }}
+      </h2>
+      <h2
+        class="font-semibold md:text-[48px] sm:w-[565px] text-[40px] leading-tight mb-[20px]"
+      >
+        {{ this.page.section1food_title }}
+      </h2>
+      <div class="mb-[31px] w-[597px] font-semibold">
+        {{ this.page.section1food_description|raw }}
+      </div>
+      <a href="http://wa.me/6285157220258" class="btn-gradient2 text-[#222222]"
+        >{{ this.page.section1food_text_btn }}</a
+      >
+    </div>
+  </section>
+
+  <section class="bg-fivety py-24">
+    <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10">
+      <div class="flex items-center">
+        <img
+          src="{{ BASEURL }}{{ this.page.section2food_image|media }}"
+          alt=""
+          class="lg:w-[519px] rounded-md"
+        />
+      </div>
+      <div class="flex items-center">
+        <p class="font-semibold text-[24px] text-[#222222] lg:w-[436px]">
+          {{ this.page.section2food_title }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-[70px]">
+    <div class="container">
+      <h2
+        class="font-semibold text-[#222222] text-[32px] text-center mb-[100px]"
+      >
+        {{ this.page.section3food_title }}
+      </h2>
+
+      {% for card in viewBag.section3food_2 %} {% if card.right == true %}
+      <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+        <div class="flex flex-col justify-center gap-2">
+          <h2 class="lg:text-right font-semibold text-[28px]">
+            {{ card.title }}
+          </h2>
+          <div class="lg:text-right text-[20px] paragraf">
+            {{ card.description|raw }}
+          </div>
+        </div>
+        <div>
+          <img
+            src="{{ BASEURL }}{{ card.image|media }}"
+            alt=""
+            class="rounded-md"
+          />
+        </div>
+      </div>
+      {% else %}
+      <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+        <div>
+          <img
+            src="{{ BASEURL }}{{ card.image|media }}"
+            alt=""
+            class="rounded-md"
+          />
+        </div>
+        <div class="flex flex-col justify-center gap-2">
+          <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+          <div class="text-[20px]">{{ card.description|raw }}</div>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+  </section>
+
+  <section class="mt-[100px] bg-fivety py-12">
+    <div class="container">
+      <h2 class="text-[32px] font-semibold text-[#222222] mb-[38px]">
+        Artikel POSbill
+      </h2>
+
+      {% set posts = blogPosts.posts %}
+
+      <ul
+        class="post-list grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-28"
+      >
+        {% for post in posts %}
+
+        <li>
+          <a href="{{ post.url }}">
+            {% if post.featured_images.count %}
+            <div class="featured-images text-center">
+              {% for image in post.featured_images %}
+              <p>
+                <img
+                  data-src="{{ image.filename }}"
+                  src="{{ image.path }}"
+                  alt="{{ image.description }}"
+                  class="w-full"
+                />
+              </p>
+              {% endfor %}
+            </div>
+            {% endif %}
+            <h3 class="font-medium text-[16px] mt-4">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+            <p class="excerpt text-[14px] mt-5">{{ post.summary|raw }}</p>
+          </a>
+          <a
+            href="{{ post.url }}"
+            class="flex items-center gap-4 text-primary mt-2"
+          >
+            Selengkapnya
+            <span class="iconify" data-icon="charm:arrow-right"></span>
+          </a>
+        </li>
+        {% else %}
+        <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+        {% endfor %}
+      </ul>
+
+      {% if posts.lastPage > 1 %}
+      <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+        <li>
+          <a
+            href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}"
+            >&larr; Prev</a
+          >
+        </li>
+        {% endif %} {% for page in 1..posts.lastPage %}
+        <li class="{{ posts.currentPage == page ? 'active' : null }}">
+          <a
+            href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}"
+            >{{ page }}</a
+          >
+        </li>
+        {% endfor %} {% if posts.lastPage > posts.currentPage %}
+        <li>
+          <a
+            href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}"
+            >Next &rarr;</a
+          >
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+{% partial 'floatwa' %} {% partial 'footer' %}";s:4:"code";N;}}

@@ -38,7 +38,7 @@ section2harga_2[1][text_btn] = "Beli"
 					class="font-semibold text-[#222222] md:text-[48px] md:w-[978px] text-[40px] leading-tight mb-[44px]">
 					{{ this.page.section1harga_description|raw }}
 				</div>
-				<a href="" class="btn-gradient1">{{ this.page.section1harga_text_btn }}</a>
+				<a href="http://wa.me/6285157220258" class="btn-gradient1">{{ this.page.section1harga_text_btn }}</a>
 			</div>
 		</div>
 	</section>
@@ -72,7 +72,7 @@ section2harga_2[1][text_btn] = "Beli"
 					</div>
 					{% endif %}
 
-					<a href=""
+					<a href="http://wa.me/6285157220258"
 						class="py-2 px-16 flex items-center justify-center bg-secondary rounded-full mt-[6px]">Beli</a>
 				</div>
 				{% endfor %}
@@ -232,44 +232,5 @@ section2harga_2[1][text_btn] = "Beli"
 
 </main>
 
-
-<footer class="mt-[100px] bg-third pt-20 pb-10">
-	<div class="container flex flex-col justify-center items-center gap-16">
-		<ul class="flex lg:flex-row flex-col items-center justify-between gap-6 text-white">
-			<li><a href="">BERANDA</a></li>
-			<li><a href="">FITUR</a></li>
-			<li><a href="">SOLUSI BISNIS</a></li>
-			<li><a href="">HARGA</a></li>
-			<li><a href="">ARTIKEL</a></li>
-			<li><a href="">DONWLOAD APLIKASI</a></li>
-			<li><a href="">KEBIJAKAN PRIVASI</a></li>
-		</ul>
-
-		<img src="{{ 'assets/images/logo2.png'|theme }}" alt="Logo Posbill" class="w-[130.56px]">
-
-		<div>
-			<ul class="flex items-center gap-5">
-				<li>
-					<img src="{{ 'assets/images/icon/icn-fb.svg'|theme }}" alt="Icon Facebook" class="w-[35.6px]">
-				</li>
-				<li>
-					<img src="{{ 'assets/images/icon/icn-wa.svg'|theme }}" alt="Icon Whatsapp" class="w-[33px]">
-				</li>
-				<li>
-					<img src="{{ 'assets/images/icon/icn-yt.svg'|theme }}" alt="Icon Youtube" class="w-[46.02px]">
-				</li>
-				<li>
-					<img src="{{ 'assets/images/icon/icn-eml.sv'|theme }}g" alt="Icon Email" class="w-[38px]">
-				</li>
-				<li>
-					<img src="{{ 'assets/images/icon/icn-ig.svg'|theme }}" alt="Icon Instagram" class="w-[33px]">
-				</li>
-			</ul>
-
-			<p class="w-[288px] text-[14px] text-white text-center mt-6">
-				© Copyright 2021, All right reserved
-				PT Novatama Solusi Teknologi
-			</p>
-		</div>
-	</div>
-</footer>
+{% partial 'floatwa' %}
+{% partial 'footer' %}

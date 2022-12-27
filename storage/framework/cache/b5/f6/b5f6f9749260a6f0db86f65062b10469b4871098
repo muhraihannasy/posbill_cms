@@ -1,0 +1,132 @@
+1672143960a:1:{s:8:"dana.htm";a:14:{s:8:"fileName";s:8:"dana.htm";s:7:"content";s:3295:"title = "Dana"
+url = "/dana"
+layout = "default"
+is_hidden = 0
+section1dana_title = "Dana"
+section1dana_description = "<p>Modal usaha untuk kembangkan usaha anda &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp;</p>"
+section1dana_text_btn = "Daftar Sekarang"
+section1dana_image = "/ils-1d.png"
+
+[viewBag]
+section2dana[0][title] = "Kembangkan usaha anda"
+section2dana[0][description] = "<p style=\"text-align: left;\">Posbill membantu pelaku usaha untuk mendapatkan
+    kesempatan pinjaman dana usaha yang membantu bisnis anda dalam meningkatkan usaha anda.</p>"
+section2dana[0][image] = "/ils-2d.png"
+section2dana[0][right] = 1
+section2dana[1][title] = "Fitur Lengkap Lainnya"
+section2dana[1][description] = "<p>POSbill adalah point of sales dengan segala fitur yang Anda butuhkan, mulai dari
+    manajemen produk, manajemen pelanggan, fitur promosi, absensi, akses staff dan sebagainya. &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>"
+section2dana[1][image] = "/ils-3d.png"
+section2dana[1][right] = 0
+==
+{% set BASEURL = 'http://localhost/posbill_cms/' %}
+
+{% partial 'nav2' %}
+
+<main>
+    <section class="bg-[#A71A65] lg:h-[644px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]">
+        <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10 ">
+            <div class="flex lg:justify-end">
+                <img src="{{ BASEURL }}{{  this.page.section1dana_image|media }}" alt="" class="lg:w-[483.36px]">
+            </div>
+            <div class="lg:pt-20">
+                <h2 class="font-semibold text-[36px] mb-[24px]">{{ this.page.section1dana_title }}</h2>
+                <div class="mb-[31px] lg:w-[462px] text-[24px] font-light">
+                    {{ this.page.section1dana_description|raw }}
+                </div>
+                <a href="" class="btn-gradient2 text-[#222222]">{{ this.page.section1dana_text_btn }}</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[20px]">
+        <div class="container">
+
+            {% for card in viewBag.section2dana %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                {% if card.right == true %}
+                <div class="flex flex-col justify-center gpap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[16px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                {% else %}
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[16px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% partial 'floatwa' %}
+{% partial 'footer' %}";s:5:"mtime";i:1672115141;s:6:"markup";s:2227:"{% set BASEURL = 'http://localhost/posbill_cms/' %}
+
+{% partial 'nav2' %}
+
+<main>
+    <section class="bg-[#A71A65] lg:h-[644px] flex items-center text-white lg:pt-0 pt-[100px] pb-[50px]">
+        <div class="container grid lg:grid-cols-2 grid-cols-1 gap-10 ">
+            <div class="flex lg:justify-end">
+                <img src="{{ BASEURL }}{{  this.page.section1dana_image|media }}" alt="" class="lg:w-[483.36px]">
+            </div>
+            <div class="lg:pt-20">
+                <h2 class="font-semibold text-[36px] mb-[24px]">{{ this.page.section1dana_title }}</h2>
+                <div class="mb-[31px] lg:w-[462px] text-[24px] font-light">
+                    {{ this.page.section1dana_description|raw }}
+                </div>
+                <a href="" class="btn-gradient2 text-[#222222]">{{ this.page.section1dana_text_btn }}</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-[20px]">
+        <div class="container">
+
+            {% for card in viewBag.section2dana %}
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mt-20">
+                {% if card.right == true %}
+                <div class="flex flex-col justify-center gpap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[16px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                {% else %}
+                <div>
+                    <img src="{{ BASEURL }}{{ card.image|media }}" alt="" class="rounded-md">
+                </div>
+                <div class="flex flex-col justify-center gap-2">
+                    <h2 class="font-semibold text-[28px]">{{ card.title }}</h2>
+                    <div class="text-[16px]">
+                        {{ card.description|raw }}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% partial 'floatwa' %}
+{% partial 'footer' %}";s:4:"code";N;s:5:"title";s:4:"Dana";s:3:"url";s:5:"/dana";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:18:"section1dana_title";s:4:"Dana";s:24:"section1dana_description";s:107:"<p>Modal usaha untuk kembangkan usaha anda &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp;</p>";s:21:"section1dana_text_btn";s:15:"Daftar Sekarang";s:18:"section1dana_image";s:11:"/ils-1d.png";s:7:"viewBag";a:1:{s:12:"section2dana";a:2:{i:0;a:4:{s:5:"title";s:21:"Kembangkan usaha anda";s:11:"description";s:173:"<p style="text-align: left;">Posbill membantu pelaku usaha untuk mendapatkan
+    kesempatan pinjaman dana usaha yang membantu bisnis anda dalam meningkatkan usaha anda.</p>";s:5:"image";s:11:"/ils-2d.png";s:5:"right";s:1:"1";}i:1;a:4:{s:5:"title";s:21:"Fitur Lengkap Lainnya";s:11:"description";s:258:"<p>POSbill adalah point of sales dengan segala fitur yang Anda butuhkan, mulai dari
+    manajemen produk, manajemen pelanggan, fitur promosi, absensi, akses staff dan sebagainya. &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>";s:5:"image";s:11:"/ils-3d.png";s:5:"right";s:1:"0";}}}}}

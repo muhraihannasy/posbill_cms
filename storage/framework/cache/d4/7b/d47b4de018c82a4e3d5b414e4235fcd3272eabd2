@@ -1,7 +1,0 @@
-1661017311a:1:{s:11:"artikel.htm";a:9:{s:8:"fileName";s:11:"artikel.htm";s:7:"content";s:98:"title = "Artikel"
-url = "/artikel"
-layout = "default"
-is_hidden = 0
-==
-
-{% partial 'nav2' %}";s:5:"mtime";i:1660965014;s:6:"markup";s:20:"{% partial 'nav2' %}";s:4:"code";N;s:5:"title";s:7:"Artikel";s:3:"url";s:8:"/artikel";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

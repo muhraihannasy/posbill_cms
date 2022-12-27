@@ -1,0 +1,12 @@
+1672143998a:1:{s:11:"floatwa.htm";a:5:{s:8:"fileName";s:11:"floatwa.htm";s:7:"content";s:224:"<a
+  href="http://wa.me/6285157220258"
+  class="fixed bottom-[3rem] right-[3rem] w-[5rem] z-[999] bg-green-600 rounded-full shadow-lg"
+>
+  <img src="{{ 'assets/images/icon/wa.png'|theme }}" alt="Icon Whatsapp" />
+</a>
+";s:5:"mtime";i:1672143395;s:6:"markup";s:222:"<a
+  href="http://wa.me/6285157220258"
+  class="fixed bottom-[3rem] right-[3rem] w-[5rem] z-[999] bg-green-600 rounded-full shadow-lg"
+>
+  <img src="{{ 'assets/images/icon/wa.png'|theme }}" alt="Icon Whatsapp" />
+</a>";s:4:"code";N;}}
