@@ -1,4 +1,4 @@
-1672144073a:1:{s:8:"food.htm";a:5:{s:8:"fileName";s:8:"food.htm";s:7:"content";s:7273:"title = "Food" url = "/food" layout = "default" is_hidden = 0 section1food_title
+1672203383a:1:{s:8:"food.htm";a:5:{s:8:"fileName";s:8:"food.htm";s:7:"content";s:7273:"title = "Food" url = "/food" layout = "default" is_hidden = 0 section1food_title
 = "Berpacu dengan waktu. Berkembang bersama POSbill." section1food_subtitle =
 "Food & Beverage" section1food_description = "
 <p>
@@ -199,7 +199,7 @@ postPage = "blog/post" == {% set BASEURL = 'http://127.0.0.1:8000' %} {% partial
 </main>
 
 {% partial 'floatwa' %} {% partial 'footer' %}
-";s:5:"mtime";i:1672143469;s:6:"markup";s:7271:"title = "Food" url = "/food" layout = "default" is_hidden = 0 section1food_title
+";s:5:"mtime";i:1672143690;s:6:"markup";s:7271:"title = "Food" url = "/food" layout = "default" is_hidden = 0 section1food_title
 = "Berpacu dengan waktu. Berkembang bersama POSbill." section1food_subtitle =
 "Food & Beverage" section1food_description = "
 <p>

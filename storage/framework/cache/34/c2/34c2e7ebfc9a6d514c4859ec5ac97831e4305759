@@ -1,4 +1,4 @@
-1672143961a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:2442:"<footer class="bg-third pt-20 pb-10 mt-[10rem]">
+1672203383a:1:{s:10:"footer.htm";a:5:{s:8:"fileName";s:10:"footer.htm";s:7:"content";s:2442:"<footer class="bg-third pt-20 pb-10 mt-[10rem]">
     <div class="container flex flex-col justify-center items-center gap-16">
         <ul class="flex lg:flex-row flex-col items-center justify-between gap-6 text-white">
             <li><a href="{{ 'beranda'|page }}">BERANDA</a></li>

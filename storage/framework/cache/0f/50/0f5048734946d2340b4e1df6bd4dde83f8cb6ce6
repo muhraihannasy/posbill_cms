@@ -1,4 +1,4 @@
-1672143668a:1:{s:8:"nav2.htm";a:5:{s:8:"fileName";s:8:"nav2.htm";s:7:"content";s:5218:"<header class="mx-auto bg-primary py-8">
+1672203390a:1:{s:8:"nav2.htm";a:5:{s:8:"fileName";s:8:"nav2.htm";s:7:"content";s:5218:"<header class="mx-auto bg-primary py-8">
   <nav class="container flex items-center justify-between">
     <a href="{{ 'beranda'|page }}" class="logo-navbar">
       <img
